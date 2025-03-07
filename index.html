@@ -1,60 +1,65 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import "tailwindcss/tailwind.css";
-
-const HomePage = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="bg-cream min-h-screen"
-    >
-      <header className="bg-darkGreen text-white py-4 px-6 flex justify-between items-center">
-        <div className="flex items-center">
-          <img src="/logo.png" alt="GIOT Logo" className="h-12 mr-3" />
-          <h1 className="text-xl font-bold">GIOT - Natural Breath, EST. 2025</h1>
-        </div>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIOT – Natural Breath</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">GIOT Logo</div>
+        <h1>GIOT – Natural Breath, EST. 2025</h1>
         <nav>
-          <ul className="flex space-x-6">
-            <li className="hover:text-gray-300 cursor-pointer">Giới thiệu</li>
-            <li className="hover:text-gray-300 cursor-pointer">Sản phẩm</li>
-            <li className="hover:text-gray-300 cursor-pointer">Tour du lịch</li>
-            <li className="hover:text-gray-300 cursor-pointer">Trang trại</li>
-            <li className="hover:text-gray-300 cursor-pointer">Liên hệ</li>
-          </ul>
+            <ul>
+                <li><a href="#gioi-thieu">Giới thiệu</a></li>
+                <li><a href="#san-pham">Sản phẩm</a></li>
+                <li><a href="#tour">Tour du lịch</a></li>
+                <li><a href="#trang-trai">Trang trại</a></li>
+                <li><a href="#lien-he">Liên hệ</a></li>
+            </ul>
         </nav>
-      </header>
-      <main className="text-center py-16 px-4">
-        <h2 className="text-4xl font-bold mb-4">Chào mừng đến với GIOT</h2>
-        <p className="text-lg text-gray-700">
-          Chúng tôi cung cấp tinh dầu thiên nhiên và các tour du lịch trải nghiệm.
-        </p>
-      </main>
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 pb-16">
-        {[1, 2, 3].map((item) => (
-          <motion.div
-            key={item}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            className="bg-white shadow-md rounded-lg p-4"
-          >
-            <img
-              src={`/product-${item}.jpg`}
-              alt={`Sản phẩm ${item}`}
-              className="w-full h-64 object-cover rounded-md"
-            />
-            <h3 className="text-lg font-semibold mt-3">Sản phẩm {item}</h3>
-            <p className="text-gray-600">Mô tả ngắn về sản phẩm.</p>
-          </motion.div>
-        ))}
-      </section>
-    </motion.div>
-  );
-};
-
-export default HomePage;
+    </header>
+    
+    <section id="gioi-thieu">
+        <h2>Chào mừng đến với GIOT</h2>
+        <p>Chúng tôi cung cấp tinh dầu thiên nhiên và các tour du lịch trải nghiệm.</p>
+    </section>
+    
+    <section id="san-pham">
+        <h2>Sản phẩm</h2>
+        <div class="product-category">
+            <h3>Tinh dầu thiên nhiên</h3>
+            <p>Mô tả, hình ảnh, giá, chi tiết mùi hương.</p>
+        </div>
+        <div class="product-category">
+            <h3>Tinh dầu nghệ thuật</h3>
+            <p>Mô tả, hình ảnh, giá, ý nghĩa nhãn dán.</p>
+        </div>
+        <div class="product-category">
+            <h3>Hydrosol</h3>
+            <p>Mô tả, hình ảnh, công dụng.</p>
+        </div>
+    </section>
+    
+    <section id="tour">
+        <h2>Tour du lịch</h2>
+        <p>Danh sách các tour du lịch độc đáo.</p>
+    </section>
+    
+    <section id="trang-trai">
+        <h2>Trang trại</h2>
+        <p>Quy trình sản xuất tinh dầu, địa chỉ cụ thể.</p>
+    </section>
+    
+    <section id="lien-he">
+        <h2>Liên hệ</h2>
+        <p>Thông tin liên hệ của GIOT.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 GIOT – Natural Breath. All rights reserved.</p>
+    </footer>
+</body>
+</html>
