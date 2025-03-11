@@ -1,0 +1,15 @@
+How to up Git:
+
+Chuột phải vào folder dự án: Git bash here
+
+Copy các dòng:
+
+git add .
+
+git commit -m"Để lại tin nhắn/bình luận/nội dung đẩy lên là gì?"
+
+git push
+
+Sau đó lên trang web của git rồi tạo pull request, nhập tiêu đề, nội dung rồi ấn create pull request
+
+Thử đi!
