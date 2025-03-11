@@ -4,6 +4,13 @@ Chuột phải vào folder dự án: Git bash here
 
 Copy các dòng:
 
+git checkout linh
+
+git pull origin main
+
+Khi gặp màn hình hiện nội dung đen thì gõ :x
+(nó hỏi nội dung để nhập là gì, :x là skip), còn nếu không được thử ctrl+C
+
 git add .
 
 git commit -m"Để lại tin nhắn/bình luận/nội dung đẩy lên là gì?"
