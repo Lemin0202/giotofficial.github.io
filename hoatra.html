@@ -22,11 +22,259 @@
       <!-- fevicon -->
       <link rel="icon" href="images/fevicon.png" type="image/gif" />
       <!-- font css -->
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <style>
+         body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+         }
+         
+         h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+         }
+         
+         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+         }
+         
+         .product-container {
+            display: flex;
+            margin: 30px 0;
+            gap: 50px;
+            flex-wrap: wrap;
+         }
+         
+         .product-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+         
+         .product-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+         }
+         
+         .product-details {
+            flex: 1;
+            min-width: 300px;
+         }
+         
+         .product-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #333;
+            line-height: 1.3;
+         }
+         
+         .product-info-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+         }
+         
+         .product-info-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+         }
+         
+         .product-info-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+         }
+         
+         .label-bold {
+            font-weight: 700;
+            color: #222;
+         }
+         
+         .usage-section {
+            margin-top: 20px;
+         }
+         
+         .usage-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-weight: 600;
+         }
+         
+         .usage-title::before {
+            content: "👉";
+            margin-right: 10px;
+         }
+         
+         .usage-list {
+            list-style-type: none;
+            padding-left: 0;
+         }
+         
+         .usage-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: #333;
+            line-height: 1.5;
+         }
+         
+         .usage-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+         }
+         
+         .highlight {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            line-height: 1.5;
+         }
+         
+         .highlight::before {
+            content: "👑";
+            margin-right: 10px;
+         }
+         
+         .buy-button {
+            display: inline-block;
+            background-color: #ee4d2d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+         }
+         
+         .buy-button:hover {
+            background-color: #d73211;
+         }
+         
+         .image-dots {
+            margin-top: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+         }
+         
+         .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+         }
+         
+         .dot.active {
+            background-color: #666;
+         }
+         
+         .dot.inactive {
+            background-color: #ccc;
+         }
+         
+         .product-image-slide {
+            display: none;
+         }
+         
+         .product-image-slide.active {
+            display: block;
+         }
+         
+         .explanation-section {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+         }
+         
+         .explanation-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+         }
+         
+         .explanation-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+         }
+         
+         .explanation-text {
+            flex: 1;
+            min-width: 300px;
+         }
+         
+         .explanation-image {
+            display: none;
+         }
+         
+         .explanation-subtitle {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+            position: relative;
+            padding-left: 20px;
+         }
+         
+         .explanation-subtitle::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #ee4d2d;
+            border-radius: 50%;
+         }
+         
+         .explanation-part {
+            margin-bottom: 25px;
+         }
+         
+         .explanation-part p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+         }
+         
+         @media (max-width: 768px) {
+            .product-container {
+               flex-direction: column;
+               gap: 30px;
+            }
+            
+            .product-title {
+               font-size: 1.5rem;
+            }
+         }
+      </style>
    </head>
    <body>
       <!-- header section start -->
@@ -37,7 +285,7 @@
             </div>
             <div class="icons-container">
                <div class="nav-item">
-                  <a class="nav-link" href="tinhdau.html" id="tinhdauLink">
+                  <a class="nav-link" href="tinhdauthiennhien.html" id="tinhdauLink">
                      <img src="images/icon-1.png" alt="Tinh dầu" title="Tinh dầu thiên nhiên">
                      <span class="icon-text">Tinh dầu</span>
                   </a>
@@ -66,15 +314,66 @@
       
       <!-- Nội dung chính -->
       <div class="container" style="padding: 60px 0;">
-         <div class="row">
-            <div class="col-md-12">
-               <h1 style="color: #333; font-size: 2.2rem; font-weight: 600; margin-bottom: 50px; font-family: 'Poppins', sans-serif; text-align: center;">Hoa Trà</h1>
+         <!-- Phần sản phẩm -->
+         <div class="product-container">
+            <div class="product-image">
+               <img src="images/hoa_tra1.png" alt="Tinh dầu Hoa Trà" class="product-image-slide active" id="image1">
+               <img src="images/hoa_tra2.png" alt="Tinh dầu Hoa Trà" class="product-image-slide" id="image2">
+               <div class="image-dots">
+                  <span class="dot active" onclick="showImage(1)"></span>
+                  <span class="dot inactive" onclick="showImage(2)"></span>
+               </div>
+            </div>
+            <div class="product-details">
+               <h1 class="product-title">Tinh dầu Hoa Trà – Hương thơm thanh khiết, thư giãn tuyệt đối</h1>
+               <ul class="product-info-list">
+                  <li><span class="label-bold">Mùi hương:</span> Nhẹ nhàng, thanh khiết, mang lại cảm giác dễ chịu</li>
+                  <li><span class="label-bold">Shelf life:</span> 2-3 năm</li>
+                  <li><span class="label-bold">KidSafe®:</span> Có</li>
+                  <li><span class="label-bold">An toàn cho phụ nữ có thai:</span> Có</li>
+                  <li><span class="label-bold">An toàn cho phụ nữ nuôi con sữa mẹ:</span> Có</li>
+                  <li><span class="label-bold">An toàn cho thú cưng:</span> Có</li>
+                  <li><span class="label-bold">Kết hợp hoàn hảo với:</span> Oải hương, cam ngọt, sả chanh, bạc hà, gỗ hồng</li>
+               </ul>
+               
+               <div class="usage-section">
+                  <div class="usage-title">Cách sử dụng:</div>
+                  <ul class="usage-list">
+                     <li>Dùng với máy khuếch tán hoặc đèn xông để tạo không gian thư giãn</li>
+                     <li>Nhỏ vài giọt vào nước lau sàn để giữ nhà cửa luôn thơm mát</li>
+                     <li>Xịt nhẹ lên chăn gối để có giấc ngủ ngon hơn</li>
+                  </ul>
+               </div>
+               
+               <div class="highlight">Đặt hàng ngay để tận hưởng không gian trong lành, dễ chịu mỗi ngày! 💕</div>
+               
+               <div style="text-align: center; margin-top: 25px;">
+                  <a href="https://shopee.vn/zdinhhoa1102?categoryId=100644&entryPoint=ShopByPDP&itemId=20083414540" target="_blank" style="text-decoration: none;">
+                     <div class="buy-button">
+                        Mua ngay tại
+                        <img src="images/shopee-icon.png" alt="Shopee" style="height: 20px; vertical-align: middle; margin-left: 5px;">
+                     </div>
+                  </a>
+               </div>
             </div>
          </div>
          
-         <div class="row">
-            <div class="col-md-12">
-               <p style="text-align: center; margin-bottom: 40px;">Nội dung chi tiết về tinh dầu Hoa Trà sẽ được cập nhật sau.</p>
+         <!-- Phần Lý giải tranh -->
+         <div class="explanation-section">
+            <h2 class="explanation-title">Lý giải tranh</h2>
+            <div class="explanation-content">
+               <div class="explanation-text">
+                  <div class="explanation-part">
+                     <h3 class="explanation-subtitle">1 - VINH HOA</h3>
+                     <p>Tranh vẽ cậu bé ôm gà. "Vinh hoa" đúng ra viết là 荣華 / 榮華, nhưng trong tranh "Vinh hoa" và "Táo quân" (Táo thần vị), chữ này được viết thành 荣花. Điều này có thể liên quan đến việc kiêng húy vợ hoàng đế Minh Mạng (明命), bà Hồ Thị Hoa (胡氏華).</p>
+                     <p>Ngoài ra, các tranh Đông Hồ thời kỳ này cũng tránh húy Nguyễn Phúc Thì (阮福時), tức Nguyễn Phước Thời, tên của hoàng đế Tự Đức (嗣德). Vì thế, chữ "thì" / "thời" (時) trong các bức tranh có thể được thay bằng chữ "thìn" / "thần" (辰), vốn đồng nghĩa với "thời gian" trong ngữ cảnh cổ.</p>
+                     <p>Trong Hán ngữ, chữ "kê" (雞) nghĩa là gà, phát âm gần giống chữ "cát" (吉) mang ý nghĩa tốt lành. Do đó, hình ảnh con gà lớn trong tranh tượng trưng cho "đại cát" (大吉), nghĩa là đại phúc, đại lợi.</p>
+                  </div>
+                  <div class="explanation-part">
+                     <h3 class="explanation-subtitle">2 - PHÚ QUÝ</h3>
+                     <p>Tranh vẽ cô bé ôm vịt. "Phú quý" (富貴) có nghĩa là giàu sang, sung túc. Trong tranh, phía sau hai em bé còn có hình ảnh hoa sen – một biểu tượng phổ biến trong văn hóa phương Đông, gắn liền với sự thanh cao, thuần khiết và phồn vinh.</p>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -115,5 +414,28 @@
       <script src="js/custom.js"></script>
       <!-- Tìm kiếm -->
       <script src="js/search.js"></script>
+      
+      <script>
+         function showImage(imageNumber) {
+            // Ẩn tất cả các ảnh
+            document.getElementById('image1').classList.remove('active');
+            document.getElementById('image2').classList.remove('active');
+            
+            // Hiển thị ảnh được chọn
+            document.getElementById('image' + imageNumber).classList.add('active');
+            
+            // Cập nhật trạng thái của các chấm
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+               if (index + 1 === imageNumber) {
+                  dot.classList.add('active');
+                  dot.classList.remove('inactive');
+               } else {
+                  dot.classList.remove('active');
+                  dot.classList.add('inactive');
+               }
+            });
+         }
+      </script>
    </body>
 </html> 
