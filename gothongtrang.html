@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Gỗ Thông Trắng | Giọt - Natural Breath</title>
+      <meta name="keywords" content="Tinh dầu Gỗ Thông Trắng, Tinh dầu thiên nhiên, Tinh dầu nghệ thuật, Văn hóa dân gian Việt Nam, Tranh Đông Hồ">
+      <meta name="description" content="Khám phá tinh dầu Gỗ Thông Trắng từ Giọt – hương thơm nhẹ nhàng, tươi mát mang đến cảm giác bình yên giữa rừng sâu.">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <style>
+         body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+         }
+         
+         h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+         }
+         
+         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+         }
+         
+         .product-container {
+            display: flex;
+            margin: 30px 0;
+            gap: 50px;
+            flex-wrap: wrap;
+         }
+         
+         .product-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+         
+         .product-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+         }
+         
+         .product-details {
+            flex: 1;
+            min-width: 300px;
+         }
+         
+         .product-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #333;
+            line-height: 1.3;
+         }
+         
+         .product-info-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+         }
+         
+         .product-info-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+         }
+         
+         .product-info-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+         }
+         
+         .label-bold {
+            font-weight: 700;
+            color: #222;
+         }
+         
+         .usage-section {
+            margin-top: 20px;
+         }
+         
+         .usage-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-weight: 600;
+         }
+         
+         .usage-title::before {
+            content: "👉";
+            margin-right: 10px;
+         }
+         
+         .usage-list {
+            list-style-type: none;
+            padding-left: 0;
+         }
+         
+         .usage-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: #333;
+            line-height: 1.5;
+         }
+         
+         .usage-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+         }
+         
+         .highlight {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            line-height: 1.5;
+         }
+         
+         .highlight::before {
+            content: "👑";
+            margin-right: 10px;
+         }
+         
+         .buy-button {
+            display: inline-block;
+            background-color: #ee4d2d;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            width: auto;
+            min-width: 120px;
+            max-width: 180px;
+         }
+         
+         .buy-button:hover {
+            background-color: #d73211;
+         }
+         
+         .image-dots {
+            margin-top: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+         }
+         
+         .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+         }
+         
+         .dot.active {
+            background-color: #666;
+         }
+         
+         .dot.inactive {
+            background-color: #ccc;
+         }
+         
+         .product-image-slide {
+            display: none;
+         }
+         
+         .product-image-slide.active {
+            display: block;
+         }
+         
+         .explanation-section {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+         }
+         
+         .explanation-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+         }
+         
+         .explanation-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+         }
+         
+         .explanation-text {
+            flex: 1;
+            min-width: 300px;
+         }
+         
+         .explanation-image {
+            display: none;
+         }
+         
+         .explanation-subtitle {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+            position: relative;
+            padding-left: 20px;
+         }
+         
+         .explanation-subtitle::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #ee4d2d;
+            border-radius: 50%;
+         }
+         
+         .explanation-part {
+            margin-bottom: 25px;
+         }
+         
+         .explanation-part p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+         }
+         
+         .explanation-part strong {
+            font-weight: 700;
+            color: #000;
+         }
+         
+         .artwork-image-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+         }
+         
+         .artwork-images-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+         }
+         
+         .artwork-image-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+         }
+         
+         .artwork-image {
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+         }
+         
+         .artwork-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+         }
+         
+         @media (max-width: 768px) {
+            .product-container {
+               flex-direction: column;
+               gap: 30px;
+            }
+            
+            .product-title {
+               font-size: 1.5rem;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="new-header">
+         <div class="container">
+            <div class="logo-container">
+               <a href="index.html"><img src="images/logo.png" alt="Giọt Logo"></a>
+            </div>
+            <div class="icons-container">
+               <div class="nav-item">
+                  <a class="nav-link" href="tinhdauthiennhien.html" id="tinhdauLink">
+                     <img src="images/icon-1.png" alt="Tinh dầu" title="Tinh dầu thiên nhiên">
+                     <span class="icon-text">Tinh dầu</span>
+                  </a>
+               </div>
+               
+               <div class="nav-item">
+                  <a class="nav-link" href="tour.html" id="tourLink">
+                     <img src="images/icon-2.png" alt="Tour tham quan" title="Tour chưng cất">
+                     <span class="icon-text">Tour</span>
+                  </a>
+               </div>
+               
+               <a href="https://shopee.vn/shop/320025301" class="nav-link" target="_blank">
+                  <img src="images/icon-3.png" alt="Liên hệ" title="Liên hệ trên Shopee">
+                  <span class="icon-text">Liên hệ</span>
+               </a>
+            </div>
+            <div class="search-container">
+               <input type="text" class="search-input" placeholder="Tìm kiếm...">
+               <i class="fa fa-search search-icon"></i>
+               <i class="fa fa-times search-close"></i>
+            </div>
+         </div>
+      </div>
+      <!-- header section end -->
+      
+      <!-- Nội dung chính -->
+      <div class="container" style="padding: 60px 0;">
+         <!-- Phần sản phẩm -->
+         <div class="product-container">
+            <div class="product-image">
+               <img src="images/go_thong_trang1.png" alt="Tinh dầu Gỗ Thông Trắng" class="product-image-slide active" id="image1">
+               <img src="images/go_thong_trang2.png" alt="Tinh dầu Gỗ Thông Trắng" class="product-image-slide" id="image2">
+               <div class="image-dots">
+                  <span class="dot active" onclick="showImage(1)"></span>
+                  <span class="dot inactive" onclick="showImage(2)"></span>
+               </div>
+            </div>
+            <div class="product-details">
+               <h1 class="product-title">Tinh dầu Gỗ Thông Trắng 🌲 – Hương thơm thư giãn, thanh lọc không gian, mang lại cảm giác bình yên giữa rừng sâu ✨</h1>
+               <ul class="product-info-list">
+                  <li><span class="label-bold">Mùi hương:</span> Gỗ thơm nhẹ nhàng, tươi mát, pha chút nhựa cây đặc trưng của rừng thông</li>
+                  <li><span class="label-bold">Shelf life:</span> 3-4 năm</li>
+                  <li><span class="label-bold">KidSafe®:</span> Có, an toàn khi khuếch tán</li>
+                  <li><span class="label-bold">An toàn cho phụ nữ có thai:</span> Có, nhưng nên pha loãng trước khi dùng trên da</li>
+                  <li><span class="label-bold">An toàn cho phụ nữ nuôi con sữa mẹ:</span> Có</li>
+                  <li><span class="label-bold">An toàn cho thú cưng:</span> Không khuyến khích dùng trực tiếp cho chó, mèo</li>
+                  <li><span class="label-bold">Kết hợp hoàn hảo với:</span> Oải hương, gỗ tuyết tùng, cam bergamot, bạc hà, gỗ đàn hương</li>
+               </ul>
+               
+               <div class="usage-section">
+                  <div class="usage-title">Cách sử dụng:</div>
+                  <ul class="usage-list">
+                     <li>Dùng với máy khuếch tán hoặc đèn xông để tạo không gian thư giãn</li>
+                     <li>Nhỏ vài giọt vào nước lau sàn để giữ nhà cửa luôn thơm mát</li>
+                     <li>Xịt nhẹ lên chăn gối để có giấc ngủ ngon hơn</li>
+                  </ul>
+               </div>
+               
+               <div class="highlight">Đặt hàng ngay để tận hưởng không gian trong lành, dễ chịu mỗi ngày! 💕</div>
+               
+               <div style="text-align: center; margin-top: 25px;">
+                  <a href="https://shopee.vn/shop/320025301" target="_blank" style="text-decoration: none;">
+                     <div class="buy-button">
+                        Mua ngay tại
+                        <img src="images/shopee_icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Phần Lý giải tranh -->
+         <div class="explanation-section">
+            <h2 class="explanation-title">Lý giải tranh dân gian</h2>
+            <div class="explanation-content">
+               <div class="explanation-text">
+                  <div class="explanation-part">
+                     <h3 class="explanation-subtitle">1 - VĂN MINH TIẾN BỘ (文明進步)</h3>
+                     <p>Dòng chữ trong tranh: "<strong style="font-weight: 700;">Văn minh tiến bộ - Toa, tăng xương</strong>" (<strong style="font-weight: 700;">文明進步 - 坐增昌</strong>)</p>
+                     <p>Giải nghĩa từng phần:</p>
+                     <p>1. <strong style="font-weight: 700;">文明進步</strong> (Văn minh tiến bộ): Nghĩa gốc là "Sự văn minh và tiến bộ" – một khái niệm mà chính quyền thuộc địa Pháp quảng bá mạnh mẽ ở Việt Nam.</p>
+                     <p>2. <strong style="font-weight: 700;">坐增昌</strong> (Toa, tăng xương):</p>
+                     <p>• <strong style="font-weight: 700;">增昌</strong> (Tăng xương) nếu hiểu theo nghĩa Hán là "thêm sáng sủa, hưng thịnh".</p>
+                     <p>• Nhưng đây thực chất là cách ký âm chữ Nôm cho câu "<strong style="font-weight: 700;">Toi, attention!</strong>" trong tiếng Pháp bồi, nghĩa là "Mày coi chừng!" hoặc "Mày liệu hồn!".</p>
+                     <p>• Như vậy, câu "Văn minh tiến bộ - Toa, tăng xương" có thể hiểu là một lời chế giễu chua cay, ám chỉ rằng thời cuộc thay đổi thì mọi người nên cẩn thận!</p>
+                  </div>
+                  <div class="explanation-part">
+                     <h3 class="explanation-subtitle">2 - PHONG TỤC CẢI LƯƠNG (風俗改良)</h3>
+                     <p>Dòng chữ trong tranh: "<strong style="font-weight: 700;">Phong tục cải lương - Moa, tặng phú</strong>" (<strong style="font-weight: 700;">風俗改良 - 摸贈富</strong>)</p>
+                     <p>Giải nghĩa từng phần:</p>
+                     <p>1. <strong style="font-weight: 700;">風俗改良</strong> (Phong tục cải lương): Nghĩa gốc là "Cải thiện phong tục, sửa đổi cho tốt hơn". Cụm từ này từng được sử dụng để chỉ những cải cách văn hóa theo mô hình phương Tây.</p>
+                     <p>2. <strong style="font-weight: 700;">摸贈富</strong> (Moa, tặng phú):</p>
+                     <p>• <strong style="font-weight: 700;">贈富</strong> (Tặng phú) nếu hiểu theo nghĩa Hán là "ban tặng sự giàu có".</p>
+                     <p>• Nhưng thực chất, đây là ký âm chữ Nôm cho câu "<strong style="font-weight: 700;">Moi, t'en fous!</strong>" trong tiếng Pháp bồi, nghĩa là "Tao mặc kệ!" hoặc "Tao không quan tâm!".</p>
+                     <p>• Như vậy, câu "Phong tục cải lương - Moa, tặng phú" có thể hiểu là một lời phản đối mỉa mai, ngụ ý rằng có thay đổi thế nào thì "Tao cũng chẳng thèm để ý!".</p>
+                  </div>
+                  <div class="explanation-part">
+                     <h3 class="explanation-subtitle">Ý NGHĨA CHÂM BIẾM CỦA TRANH</h3>
+                     <p>Bộ tranh này phản ánh tâm lý chống đối sự du nhập văn hóa phương Tây của một bộ phận người Việt vào thời Pháp thuộc. Hai thái độ trái ngược được khắc họa rõ ràng:</p>
+                     <p>• Một bên thì hùng hổ cảnh báo (Toa tăng xương! Mày coi chừng!).</p>
+                     <p>• Một bên thì cười khẩy, mặc kệ (Moa tặng phú! Tao đếch quan tâm!).</p>
+                     <p>Sự kết hợp giữa Hán - Nôm và tiếng Pháp bồi trong tranh không chỉ là một trò chơi chữ tinh tế mà còn là một cách phản ứng đầy hóm hỉnh của người dân trước thời cuộc. Nó cho thấy sự lưỡng lự, hoang mang của xã hội Việt Nam khi bị đặt giữa hai luồng văn hóa: giữ gìn truyền thống hay chạy theo văn minh ngoại nhập?</p>
+                     <p>Dòng thời gian vẫn trôi, văn minh phương Tây dần len lỏi vào đời sống, và phong tục Việt Nam cũng dần thay đổi. Nhưng đâu đó, giữa dòng chảy ấy, vẫn có những con người như người phu xe, như cô gái gánh hàng rong, như ông đồ già, vẫn giữ lấy chút gì của ngày xưa, dù chỉ là trong những câu chữ châm biếm in trên tranh.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Phần hiển thị ảnh tranh dân gian -->
+         <div class="artwork-image-section">
+            <div class="artwork-images-row">
+               <div class="artwork-image-container">
+                  <img src="images/vanminhtienbo_baiviet.jpg" alt="Tranh dân gian Văn Minh Tiến Bộ" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Văn Minh Tiến Bộ" - Phản ánh thái độ châm biếm của người dân trước sự du nhập văn hóa phương Tây thời Pháp thuộc, với câu "Toa, tăng xương" (Mày coi chừng!)</p>
+               </div>
+               
+               <div class="artwork-image-container">
+                  <img src="images/phongtuccailuong_baiviet.jpg" alt="Tranh dân gian Phong Tục Cải Lương" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Phong Tục Cải Lương" - Thể hiện thái độ thờ ơ trước những cải cách văn hóa theo mô hình phương Tây, với câu "Moa, tặng phú" (Tao mặc kệ!)</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Nội dung chính end -->
+      
+      <!-- footer section start -->
+      <div class="new-footer">
+         <div class="container">
+            <div class="copyright">
+               © 2025 Giọt Official
+            </div>
+            <div class="social-icons">
+               <a href="https://shopee.vn/shop/320025301" class="social-icon shopee-icon">
+                  <img src="images/shopee-icon.png" alt="Shopee">
+               </a>
+               <a href="#" class="social-icon facebook-icon">
+                  <img src="images/icons/facebook-icon.svg" alt="Facebook">
+               </a>
+               <a href="#" class="social-icon instagram-icon">
+                  <img src="images/icons/instagram-icon.svg" alt="Instagram">
+               </a>
+               <a href="#" class="social-icon tiktok-icon">
+                  <img src="images/icons/tiktok-icon.svg" alt="TikTok">
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- Tìm kiếm -->
+      <script src="js/search.js"></script>
+      
+      <script>
+         function showImage(imageNumber) {
+            // Ẩn tất cả các ảnh
+            document.getElementById('image1').classList.remove('active');
+            document.getElementById('image2').classList.remove('active');
+            
+            // Hiển thị ảnh được chọn
+            document.getElementById('image' + imageNumber).classList.add('active');
+            
+            // Cập nhật trạng thái của các chấm
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+               if (index + 1 === imageNumber) {
+                  dot.classList.add('active');
+                  dot.classList.remove('inactive');
+               } else {
+                  dot.classList.remove('active');
+                  dot.classList.add('inactive');
+               }
+            });
+         }
+      </script>
+   </body>
+</html> 

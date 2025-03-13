@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Vỏ Bưởi | Giọt - Natural Breath</title>
+      <meta name="keywords" content="Tinh dầu Vỏ Bưởi, Tinh dầu thiên nhiên, Tinh dầu nghệ thuật, Văn hóa dân gian Việt Nam, Tranh Đông Hồ">
+      <meta name="description" content="Khám phá tinh dầu Vỏ Bưởi từ Giọt – hương thơm tươi mát, sảng khoái, giúp tinh thần tỉnh táo.">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <style>
+         body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+         }
+         
+         h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+         }
+         
+         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+         }
+         
+         .product-container {
+            display: flex;
+            margin: 30px 0;
+            gap: 50px;
+            flex-wrap: wrap;
+         }
+         
+         .product-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+         
+         .product-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+         }
+         
+         .product-details {
+            flex: 1;
+            min-width: 300px;
+         }
+         
+         .product-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #333;
+            line-height: 1.3;
+         }
+         
+         .product-info-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+         }
+         
+         .product-info-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+         }
+         
+         .product-info-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+         }
+         
+         .label-bold {
+            font-weight: 700;
+            color: #222;
+         }
+         
+         .usage-section {
+            margin-top: 20px;
+         }
+         
+         .usage-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-weight: 600;
+         }
+         
+         .usage-title::before {
+            content: "👉";
+            margin-right: 10px;
+         }
+         
+         .usage-list {
+            list-style-type: none;
+            padding-left: 0;
+         }
+         
+         .usage-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: #333;
+            line-height: 1.5;
+         }
+         
+         .usage-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+         }
+         
+         .highlight {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            line-height: 1.5;
+         }
+         
+         .highlight::before {
+            content: "👑";
+            margin-right: 10px;
+         }
+         
+         .buy-button {
+            display: inline-block;
+            background-color: #ee4d2d;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            width: auto;
+            min-width: 120px;
+            max-width: 180px;
+         }
+         
+         .buy-button:hover {
+            background-color: #d73211;
+         }
+         
+         .image-dots {
+            margin-top: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+         }
+         
+         .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+         }
+         
+         .dot.active {
+            background-color: #666;
+         }
+         
+         .dot.inactive {
+            background-color: #ccc;
+         }
+         
+         .product-image-slide {
+            display: none;
+         }
+         
+         .product-image-slide.active {
+            display: block;
+         }
+         
+         .explanation-section {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+         }
+         
+         .explanation-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+         }
+         
+         .explanation-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+         }
+         
+         .explanation-text {
+            flex: 1;
+            min-width: 300px;
+         }
+         
+         .explanation-image {
+            display: none;
+         }
+         
+         .explanation-subtitle {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+            position: relative;
+            padding-left: 20px;
+         }
+         
+         .explanation-subtitle::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #ee4d2d;
+            border-radius: 50%;
+         }
+         
+         .explanation-part {
+            margin-bottom: 25px;
+         }
+         
+         .explanation-part p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+         }
+         
+         .explanation-part strong {
+            font-weight: 700;
+            color: #000;
+         }
+         
+         .artwork-image-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+         }
+         
+         .artwork-images-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+         }
+         
+         .artwork-image-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+         }
+         
+         .artwork-image {
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+         }
+         
+         .artwork-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+         }
+         
+         @media (max-width: 768px) {
+            .product-container {
+               flex-direction: column;
+               gap: 30px;
+            }
+            
+            .product-title {
+               font-size: 1.5rem;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="new-header">
+         <div class="container">
+            <div class="logo-container">
+               <a href="index.html"><img src="images/logo.png" alt="Giọt Logo"></a>
+            </div>
+            <div class="icons-container">
+               <div class="nav-item">
+                  <a class="nav-link" href="tinhdauthiennhien.html" id="tinhdauLink">
+                     <img src="images/icon-1.png" alt="Tinh dầu" title="Tinh dầu thiên nhiên">
+                     <span class="icon-text">Tinh dầu</span>
+                  </a>
+               </div>
+               
+               <div class="nav-item">
+                  <a class="nav-link" href="tour.html" id="tourLink">
+                     <img src="images/icon-2.png" alt="Tour tham quan" title="Tour chưng cất">
+                     <span class="icon-text">Tour</span>
+                  </a>
+               </div>
+               
+               <a href="https://shopee.vn/shop/320025301" class="nav-link" target="_blank">
+                  <img src="images/icon-3.png" alt="Liên hệ" title="Liên hệ trên Shopee">
+                  <span class="icon-text">Liên hệ</span>
+               </a>
+            </div>
+            <div class="search-container">
+               <input type="text" class="search-input" placeholder="Tìm kiếm...">
+               <i class="fa fa-search search-icon"></i>
+               <i class="fa fa-times search-close"></i>
+            </div>
+         </div>
+      </div>
+      <!-- header section end -->
+      
+      <!-- Nội dung chính -->
+      <div class="container" style="padding: 60px 0;">
+         <!-- Phần sản phẩm -->
+         <div class="product-container">
+            <div class="product-image">
+               <img src="images/vo_buoi.png" alt="Tinh dầu Vỏ Bưởi" class="product-image-slide active" id="image1">
+               <div class="image-dots" style="display: none;">
+                  <span class="dot active" onclick="showImage(1)"></span>
+               </div>
+            </div>
+            <div class="product-details">
+               <h1 class="product-title">Tinh dầu Vỏ Bưởi 🍊✨ – Hương thơm tươi mát, sảng khoái, giúp tinh thần tỉnh táo ✨</h1>
+               <ul class="product-info-list">
+                  <li><span class="label-bold">Mùi hương:</span> Hương bưởi ngọt dịu, thanh mát, mang lại cảm giác thư giãn và đầy năng lượng</li>
+                  <li><span class="label-bold">Shelf life:</span> 1.5 - 2 năm</li>
+                  <li><span class="label-bold">KidSafe®:</span> Có</li>
+                  <li><span class="label-bold">An toàn cho phụ nữ có thai:</span> Có, nhưng nên sử dụng với lượng nhỏ</li>
+                  <li><span class="label-bold">An toàn cho phụ nữ nuôi con bằng sữa mẹ:</span> Có</li>
+                  <li><span class="label-bold">An toàn cho thú cưng:</span> Có, nhưng không để chúng tiếp xúc trực tiếp</li>
+                  <li><span class="label-bold">Kết hợp hoàn hảo với:</span> Sả chanh, cam ngọt, oải hương, bạc hà, hoắc hương</li>
+               </ul>
+               
+               <div class="usage-section">
+                  <div class="usage-title">Cách sử dụng:</div>
+                  <ul class="usage-list">
+                     <li>Dùng với máy khuếch tán hoặc đèn xông để tạo không gian thư giãn</li>
+                     <li>Nhỏ vài giọt vào nước lau sàn để giữ nhà cửa luôn thơm mát</li>
+                     <li>Xịt nhẹ lên chăn gối để có giấc ngủ ngon hơn</li>
+                  </ul>
+               </div>
+               
+               <div class="highlight">Đặt hàng ngay để tận hưởng không gian trong lành, dễ chịu mỗi ngày! 💕</div>
+               
+               <div style="text-align: center; margin-top: 25px;">
+                  <a href="https://shopee.vn/shop/320025301" target="_blank" style="text-decoration: none;">
+                     <div class="buy-button">
+                        Mua ngay tại
+                        <img src="images/shopee_icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Phần Lý giải tranh -->
+         <div class="explanation-section">
+            <h2 class="explanation-title">Lý giải tranh dân gian</h2>
+            <div class="explanation-content">
+               <div class="explanation-text">
+                  <div class="explanation-part">
+                     <h3 class="explanation-subtitle">THẦY TRÒ ĐƯỜNG TĂNG THỈNH KINH</h3>
+                     <p>Bức tranh khắc họa bốn nhân vật chính trong hành trình thỉnh kinh, ngoại trừ ngựa Bạch Long Mã (白龍馬).</p>
+                  </div>
+                  <div class="explanation-part">
+                     <h3 class="explanation-subtitle">Phân tích các nhân vật</h3>
+                     <p>• <strong style="font-weight: 700;">Đại Thánh (大圣)</strong>: tức Tề Thiên Đại Thánh (齊天大聖). Chữ "thánh" (圣) trong tranh là dị thể của "聖". "Tề" (齊) nghĩa là ngang bằng, "thiên" (天) là trời, danh hiệu này mang ý nghĩa "vị thánh vĩ đại sánh ngang trời cao".</p>
+                     <p>• <strong style="font-weight: 700;">Đường Tăng (唐僧)</strong>: "Đường" (唐) chỉ triều đại nhà Đường, còn "tăng" (僧) là từ rút gọn của "tăng-già" (僧伽), phiên âm từ tiếng Phạn "saṅgha" (सङ्घ) hoặc "saṃgha" (संघ), mang nghĩa tăng đoàn Phật giáo.</p>
+                     <p>• <strong style="font-weight: 700;">Trư Bát Giới (豬八戒)</strong>: "Trư" (豬) nghĩa là heo, nhưng trong tranh bị viết nhầm thành họ "Chư" (諸) do đồng âm "tr - ch" trong phương ngữ Bắc Bộ. "Bát Giới" (八戒) là tám điều răn cấm trong Phật giáo, nhắc nhở về sự thanh tịnh và giới luật của người tu hành.</p>
+                     <p>• <strong style="font-weight: 700;">Sa Tăng (沙僧)</strong>: "Sa" (沙) nghĩa là cát, phản ánh xuất thân của nhân vật từ dòng sông Lưu Sa, nơi chàng từng làm yêu quái trước khi quy y theo Đường Tăng.</p>
+                  </div>
+                  <div class="explanation-part">
+                     <h3 class="explanation-subtitle">Ý nghĩa của bức tranh</h3>
+                     <p>Bốn thầy trò, mỗi người một số phận, một thử thách, nhưng cùng chung chí hướng vượt muôn trùng khổ ải, quyết tâm hành hương về Tây Thiên cầu chân kinh.</p>
+                     <p>Bức tranh không chỉ đơn thuần là minh họa cho câu chuyện Tây Du Ký nổi tiếng, mà còn mang ý nghĩa sâu sắc về hành trình tu tập, vượt qua chướng ngại và khổ nạn để đạt đến giác ngộ. Mỗi nhân vật đại diện cho một khía cạnh của con người: Tôn Ngộ Không tượng trưng cho trí tuệ và sự dũng mãnh, Trư Bát Giới đại diện cho dục vọng và ham muốn, Sa Tăng là biểu tượng của sự kiên nhẫn và trung thành, còn Đường Tăng là hiện thân của đức tin và lòng từ bi.</p>
+                     <p>Tranh dân gian Đông Hồ về đề tài này không chỉ phản ánh sự ảnh hưởng của văn hóa Trung Hoa đến Việt Nam mà còn thể hiện cách tiếp nhận và Việt hóa những yếu tố văn hóa nước ngoài, tạo nên bản sắc riêng trong nghệ thuật dân gian Việt Nam.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Phần hiển thị ảnh tranh dân gian -->
+         <div class="artwork-image-section">
+            <div class="artwork-images-row">
+               <div class="artwork-image-container">
+                  <img src="images/tayduky_baiviet.jpg" alt="Tranh dân gian Thầy Trò Đường Tăng" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Thầy Trò Đường Tăng Thỉnh Kinh" - Minh họa bốn nhân vật chính trong Tây Du Ký: Đường Tăng, Tôn Ngộ Không, Trư Bát Giới và Sa Tăng, biểu tượng cho hành trình tu tập và vượt qua chướng ngại để đạt đến giác ngộ.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Nội dung chính end -->
+      
+      <!-- footer section start -->
+      <div class="new-footer">
+         <div class="container">
+            <div class="copyright">
+               © 2025 Giọt Official
+            </div>
+            <div class="social-icons">
+               <a href="https://shopee.vn/shop/320025301" class="social-icon shopee-icon">
+                  <img src="images/shopee-icon.png" alt="Shopee">
+               </a>
+               <a href="#" class="social-icon facebook-icon">
+                  <img src="images/icons/facebook-icon.svg" alt="Facebook">
+               </a>
+               <a href="#" class="social-icon instagram-icon">
+                  <img src="images/icons/instagram-icon.svg" alt="Instagram">
+               </a>
+               <a href="#" class="social-icon tiktok-icon">
+                  <img src="images/icons/tiktok-icon.svg" alt="TikTok">
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- Tìm kiếm -->
+      <script src="js/search.js"></script>
+      
+      <script>
+         function showImage(imageNumber) {
+            // Ẩn tất cả các ảnh
+            document.getElementById('image1').classList.remove('active');
+            
+            // Hiển thị ảnh được chọn
+            document.getElementById('image' + imageNumber).classList.add('active');
+            
+            // Cập nhật trạng thái của các chấm
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+               if (index + 1 === imageNumber) {
+                  dot.classList.add('active');
+                  dot.classList.remove('inactive');
+               } else {
+                  dot.classList.remove('active');
+                  dot.classList.add('inactive');
+               }
+            });
+         }
+      </script>
+   </body>
+</html> 

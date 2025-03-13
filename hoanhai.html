@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Hoa Nhài | Giọt - Natural Breath</title>
+      <meta name="keywords" content="Tinh dầu Hoa Nhài, Tinh dầu thiên nhiên, Tinh dầu nghệ thuật, Văn hóa dân gian Việt Nam, Tranh Đông Hồ">
+      <meta name="description" content="Khám phá tinh dầu Hoa Nhài từ Giọt – hương thơm quyến rũ, ngọt ngào mang đến cảm giác thư giãn sâu và ấm áp.">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <style>
+         body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+         }
+         
+         h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+         }
+         
+         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+         }
+         
+         .product-container {
+            display: flex;
+            margin: 30px 0;
+            gap: 50px;
+            flex-wrap: wrap;
+         }
+         
+         .product-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+         
+         .product-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+         }
+         
+         .product-details {
+            flex: 1;
+            min-width: 300px;
+         }
+         
+         .product-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #333;
+            line-height: 1.3;
+         }
+         
+         .product-info-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+         }
+         
+         .product-info-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+         }
+         
+         .product-info-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+         }
+         
+         .label-bold {
+            font-weight: 700;
+            color: #222;
+         }
+         
+         .usage-section {
+            margin-top: 20px;
+         }
+         
+         .usage-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-weight: 600;
+         }
+         
+         .usage-title::before {
+            content: "👉";
+            margin-right: 10px;
+         }
+         
+         .usage-list {
+            list-style-type: none;
+            padding-left: 0;
+         }
+         
+         .usage-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: #333;
+            line-height: 1.5;
+         }
+         
+         .usage-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+         }
+         
+         .highlight {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            line-height: 1.5;
+         }
+         
+         .highlight::before {
+            content: "👑";
+            margin-right: 10px;
+         }
+         
+         .buy-button {
+            display: inline-block;
+            background-color: #ee4d2d;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            width: auto;
+            min-width: 120px;
+            max-width: 180px;
+         }
+         
+         .buy-button:hover {
+            background-color: #d73211;
+         }
+         
+         .image-dots {
+            margin-top: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+         }
+         
+         .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+         }
+         
+         .dot.active {
+            background-color: #666;
+         }
+         
+         .dot.inactive {
+            background-color: #ccc;
+         }
+         
+         .product-image-slide {
+            display: none;
+         }
+         
+         .product-image-slide.active {
+            display: block;
+         }
+         
+         .explanation-section {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+         }
+         
+         .explanation-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+         }
+         
+         .explanation-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+         }
+         
+         .explanation-text {
+            flex: 1;
+            min-width: 300px;
+         }
+         
+         .explanation-image {
+            display: none;
+         }
+         
+         .explanation-subtitle {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+            position: relative;
+            padding-left: 20px;
+         }
+         
+         .explanation-subtitle::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #ee4d2d;
+            border-radius: 50%;
+         }
+         
+         .explanation-part {
+            margin-bottom: 25px;
+         }
+         
+         .explanation-part p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+         }
+         
+         .explanation-part strong {
+            font-weight: 700;
+            color: #000;
+         }
+         
+         .artwork-image-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+         }
+         
+         .artwork-images-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+         }
+         
+         .artwork-image-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+         }
+         
+         .artwork-image {
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+         }
+         
+         .artwork-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+         }
+         
+         @media (max-width: 768px) {
+            .product-container {
+               flex-direction: column;
+               gap: 30px;
+            }
+            
+            .product-title {
+               font-size: 1.5rem;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="new-header">
+         <div class="container">
+            <div class="logo-container">
+               <a href="index.html"><img src="images/logo.png" alt="Giọt Logo"></a>
+            </div>
+            <div class="icons-container">
+               <div class="nav-item">
+                  <a class="nav-link" href="tinhdauthiennhien.html" id="tinhdauLink">
+                     <img src="images/icon-1.png" alt="Tinh dầu" title="Tinh dầu thiên nhiên">
+                     <span class="icon-text">Tinh dầu</span>
+                  </a>
+               </div>
+               
+               <div class="nav-item">
+                  <a class="nav-link" href="tour.html" id="tourLink">
+                     <img src="images/icon-2.png" alt="Tour tham quan" title="Tour chưng cất">
+                     <span class="icon-text">Tour</span>
+                  </a>
+               </div>
+               
+               <a href="https://shopee.vn/shop/320025301" class="nav-link" target="_blank">
+                  <img src="images/icon-3.png" alt="Liên hệ" title="Liên hệ trên Shopee">
+                  <span class="icon-text">Liên hệ</span>
+               </a>
+            </div>
+            <div class="search-container">
+               <input type="text" class="search-input" placeholder="Tìm kiếm...">
+               <i class="fa fa-search search-icon"></i>
+               <i class="fa fa-times search-close"></i>
+            </div>
+         </div>
+      </div>
+      <!-- header section end -->
+      
+      <!-- Nội dung chính -->
+      <div class="container" style="padding: 60px 0;">
+         <!-- Phần sản phẩm -->
+         <div class="product-container">
+            <div class="product-image">
+               <img src="images/hoa_nhai1.png" alt="Tinh dầu Hoa Nhài" class="product-image-slide active" id="image1">
+               <img src="images/hoa_nhai2.png" alt="Tinh dầu Hoa Nhài" class="product-image-slide" id="image2">
+               <div class="image-dots">
+                  <span class="dot active" onclick="showImage(1)"></span>
+                  <span class="dot inactive" onclick="showImage(2)"></span>
+               </div>
+            </div>
+            <div class="product-details">
+               <h1 class="product-title">Tinh dầu Hoa Nhài 🌿 – Hương thơm quyến rũ, thư giãn sâu ✨</h1>
+               <ul class="product-info-list">
+                  <li><span class="label-bold">Mùi hương:</span> Ngọt ngào, dịu dàng và thanh khiết, giúp thư giãn tinh thần và tạo cảm giác ấm áp</li>
+                  <li><span class="label-bold">Shelf life:</span> 2-3 năm</li>
+                  <li><span class="label-bold">KidSafe®:</span> An toàn cho trẻ nhỏ</li>
+                  <li><span class="label-bold">An toàn cho phụ nữ có thai:</span> Có</li>
+                  <li><span class="label-bold">An toàn cho phụ nữ nuôi con sữa mẹ:</span> Có</li>
+                  <li><span class="label-bold">An toàn cho thú cưng:</span> Có</li>
+                  <li><span class="label-bold">Kết hợp hoàn hảo với:</span> Oải hương, cam ngọt, sả chanh, bạc hà, gỗ hồng</li>
+               </ul>
+               
+               <div class="usage-section">
+                  <div class="usage-title">Cách sử dụng:</div>
+                  <ul class="usage-list">
+                     <li>Dùng với máy khuếch tán hoặc đèn xông để tạo không gian thư giãn</li>
+                     <li>Nhỏ vài giọt vào nước lau sàn để giữ nhà cửa luôn thơm mát</li>
+                     <li>Xịt nhẹ lên chăn gối để có giấc ngủ ngon hơn</li>
+                  </ul>
+               </div>
+               
+               <div class="highlight">Đặt hàng ngay để tận hưởng không gian trong lành, dễ chịu mỗi ngày! 💕</div>
+               
+               <div style="text-align: center; margin-top: 25px;">
+                  <a href="https://shopee.vn/shop/320025301" target="_blank" style="text-decoration: none;">
+                     <div class="buy-button">
+                        Mua ngay tại
+                        <img src="images/shopee_icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Phần Lý giải tranh -->
+         <div class="explanation-section">
+            <h2 class="explanation-title">Lý giải tranh dân gian</h2>
+            <div class="explanation-content">
+               <div class="explanation-text">
+                  <p>Bức tranh Đông Hồ "Hứng dừa" khá nổi tiếng. dựa trên bố cục này mà còn có bản tranh "Trong như ngọc, trắng như ngà". Ta sẽ phân tích 2 bản tranh này. Chữ trong tranh đọc theo trình tự từ trên xuống dưới, từ phải qua trái nhé.</p>
+                  <div class="explanation-part">
+                     <h3 class="explanation-subtitle">1 - HỨNG DỪA</h3>
+                     <p>Hai chữ Nôm lớn ở đầu tranh là tên tranh "<strong style="font-weight: 700;">Hứng Dừa</strong>".</p>
+                     <p>• <strong style="font-weight: 700;">Hứng</strong>: Mượn âm chữ Hán "hứng/hưng" (興) nhưng không lấy nghĩa.</p>
+                     <p>• <strong style="font-weight: 700;">Dừa</strong>: Có hai cách lý giải:</p>
+                     <p>1. Gợi nghĩa bằng bộ "mộc" (木 - cây), kí âm bằng chữ Nôm "dưa" (荼 - quả dưa), được tạo bằng cách thêm bộ "thảo" (艹 - cỏ) vào phần kí âm "dư" (余).</p>
+                     <p>2. Gợi nghĩa bằng bộ "mộc" (木 - cây), đọc chệch từ chữ Nôm "già" (茶 - già trẻ), mượn chữ Hán "chè/trà" (茶).</p>
+                     <p>Phía dưới là câu thơ lục bát:</p>
+                     <p><em>Khen ai khéo dựng nên dừa<br>
+                     Đấy trèo đây hứng cho vừa một đôi</em></p>
+                     <p>Câu thơ mang ý nghĩa đôi tầng:</p>
+                     <p>• Ca ngợi sự khéo léo của thiên nhiên tạo nên cây dừa sai quả.</p>
+                     <p>• Cũng có thể hiểu là ngợi ca sự hòa hợp của đôi lứa trong tình yêu.</p>
+                     <p>Những từ như "<strong style="font-weight: 700;">khéo dựng</strong>", "<strong style="font-weight: 700;">trèo</strong>", "<strong style="font-weight: 700;">hứng</strong>", "<strong style="font-weight: 700;">một đôi</strong>" càng làm nổi bật ý nghĩa tình tứ trong tranh.</p>
+                     <p><strong style="font-weight: 700;">Giải thích chữ Nôm trong câu thơ:</strong></p>
+                     <p>• <strong style="font-weight: 700;">Khen</strong>: Đọc lệch từ chữ "khan/khán" (看), gợi nghĩa bằng bộ "khẩu" (口 - miệng).</p>
+                     <p>• <strong style="font-weight: 700;">Ai</strong>: Mượn âm chữ "ai" (埃), không lấy nghĩa.</p>
+                     <p>• <strong style="font-weight: 700;">Khéo</strong>: Đọc lệch từ chữ "giáo/khiếu" (窖). Thực chất, "khéo" là âm Hán-Việt cổ của chữ "xảo" (巧 - khéo léo, tinh xảo), có phiên thiết là khổ giảo thiết (苦絞切) hoặc khổ giáo thiết (苦敎切). Âm này từng phát triển thành khyáo/khyảo, rồi bị vòm hóa và trở thành "khéo", về sau chuẩn hóa thành "xảo".</p>
+                     <p>• <strong style="font-weight: 700;">Dựng</strong>: Đây là chữ đánh đố nhiều người. Bản tranh Henri Oger trong Technique du peuple annamite (Kỹ thuật của người An Nam, 1908) ghi nhận chữ Nôm "nặn", viết bằng chữ "nạn" (難 - khó khăn), trùng với câu ca dao dân gian:<br>
+                     "<em>Khen ai khéo nặn nên dừa / Đấy trèo đây hứng cho vừa một đôi.</em>"<br>
+                     Trong tranh Đông Hồ, chữ "dựng" thường viết bằng chữ Nôm dựa trên "vựng" (暈) nhưng được lược bớt nét trên đầu, đồng thời thêm bộ "thủ" (扌 - tay) để gợi nghĩa.</p>
+                     <p>• <strong style="font-weight: 700;">Nên</strong>: Đọc lệch từ chữ "niên" (年), ghi nghĩa bằng chữ "thành" (成 - nên, thành công).</p>
+                     <p>• <strong style="font-weight: 700;">Đấy</strong>: Đọc lệch từ chữ "đế" (帝), ghi nghĩa bằng chữ "chi" (之 - đấy, đó, ấy, kia).</p>
+                     <p>• <strong style="font-weight: 700;">Trèo</strong>: Đọc lệch từ chữ "triều" (朝), gợi nghĩa bằng bộ "túc" (足 - chân).</p>
+                     <p>• <strong style="font-weight: 700;">Đây</strong>: Đọc lệch từ chữ "đê" (低 - thấp).</p>
+                     <p>• <strong style="font-weight: 700;">Cho</strong>: Đọc lệch từ chữ "chu" (朱 - đỏ son).</p>
+                     <p>• <strong style="font-weight: 700;">Vừa</strong>: Đọc lệch từ chữ "bì/bìa" (皮 - da).</p>
+                     <p>• <strong style="font-weight: 700;">Một</strong>: Chữ Nôm giản hóa từ chữ Hán "một" (沒/没 - mất, chìm).</p>
+                     <p>• <strong style="font-weight: 700;">Đôi</strong>: Mượn âm chữ "đôi" (堆), không lấy nghĩa.</p>
+                     <p>Câu thơ lục bát trong tranh cho thấy nội dung bức tranh liên quan đến tình yêu đôi lứa.</p>
+                  </div>
+                  <div class="explanation-part">
+                     <h3 class="explanation-subtitle">2 - TRONG NHƯ NGỌC, TRẮNG NHƯ NGÀ</h3>
+                     <p><strong style="font-weight: 700;">Bố cục và câu chữ</strong></p>
+                     <p>Bức tranh này có dòng chữ:</p>
+                     <p><em>Trong như ngọc, trắng như ngà.</em></p>
+                     <p>• "<strong style="font-weight: 700;">Trong</strong>" (中) - Viết bằng chữ "trung", gợi nghĩa bằng bộ "thuỷ" (氵) (nước).</p>
+                     <p>• "<strong style="font-weight: 700;">Như</strong>" (如) - Là chữ Hán, mang nghĩa "giống như".</p>
+                     <p>• "<strong style="font-weight: 700;">Ngọc</strong>" (玉) - Chữ Hán, nghĩa là viên ngọc.</p>
+                     <p>• "<strong style="font-weight: 700;">Trắng</strong>" (壯) - Đọc lệch âm chữ "tráng", ghi nghĩa bằng chữ "bạch" (白) (trắng).</p>
+                     <p>• "<strong style="font-weight: 700;">Ngà</strong>" (牙) - Ghi bằng chữ "nha" (牙) (răng), thêm bộ "ngọc" (𤣩), nghĩa là ngà voi.</p>
+                     <p>Tranh này có bố cục tương tự "Hứng dừa", nhưng có sự khác biệt:</p>
+                     <p>• Có đến hai cặp đôi trong tranh.</p>
+                     <p>• Câu thơ nhấn mạnh vào vẻ đẹp trong sáng, thuần khiết:</p>
+                     <p><em>Trong như ngọc, trắng như ngà</em></p>
+                     <p>Câu thơ này cũng có thể được hiểu theo hai nghĩa:</p>
+                     <p>• <strong style="font-weight: 700;">Nghĩa tả thực</strong>: Chỉ quả dừa có nước trong và cơm trắng.</p>
+                     <p>• <strong style="font-weight: 700;">Nghĩa ẩn dụ</strong>: Gợi tả vẻ đẹp của người con gái với làn da trắng trẻo, thanh khiết như ngọc ngà.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Phần hiển thị ảnh tranh dân gian -->
+         <div class="artwork-image-section">
+            <div class="artwork-images-row">
+               <div class="artwork-image-container">
+                  <img src="images/hungdua_baiviet.jpg" alt="Tranh dân gian Hứng Dừa" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Hứng Dừa" - Minh họa câu thơ lục bát "Khen ai khéo dựng nên dừa, Đấy trèo đây hứng cho vừa một đôi", thể hiện tình yêu đôi lứa qua hình ảnh hái dừa.</p>
+               </div>
+               
+               <div class="artwork-image-container">
+                  <img src="images/hungdua_baiviet2.jpg" alt="Tranh dân gian Trong Như Ngọc, Trắng Như Ngà" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Trong Như Ngọc, Trắng Như Ngà" - Biến thể của tranh Hứng Dừa, với câu thơ ca ngợi vẻ đẹp trong sáng, thuần khiết của quả dừa và ẩn dụ cho vẻ đẹp của người con gái.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Nội dung chính end -->
+      
+      <!-- footer section start -->
+      <div class="new-footer">
+         <div class="container">
+            <div class="copyright">
+               © 2025 Giọt Official
+            </div>
+            <div class="social-icons">
+               <a href="https://shopee.vn/shop/320025301" class="social-icon shopee-icon">
+                  <img src="images/shopee-icon.png" alt="Shopee">
+               </a>
+               <a href="#" class="social-icon facebook-icon">
+                  <img src="images/icons/facebook-icon.svg" alt="Facebook">
+               </a>
+               <a href="#" class="social-icon instagram-icon">
+                  <img src="images/icons/instagram-icon.svg" alt="Instagram">
+               </a>
+               <a href="#" class="social-icon tiktok-icon">
+                  <img src="images/icons/tiktok-icon.svg" alt="TikTok">
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- Tìm kiếm -->
+      <script src="js/search.js"></script>
+      
+      <script>
+         function showImage(imageNumber) {
+            // Ẩn tất cả các ảnh
+            document.getElementById('image1').classList.remove('active');
+            document.getElementById('image2').classList.remove('active');
+            
+            // Hiển thị ảnh được chọn
+            document.getElementById('image' + imageNumber).classList.add('active');
+            
+            // Cập nhật trạng thái của các chấm
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+               if (index + 1 === imageNumber) {
+                  dot.classList.add('active');
+                  dot.classList.remove('inactive');
+               } else {
+                  dot.classList.remove('active');
+                  dot.classList.add('inactive');
+               }
+            });
+         }
+      </script>
+   </body>
+</html> 
