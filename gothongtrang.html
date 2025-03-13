@@ -277,6 +277,56 @@
             color: #000;
          }
          
+         .artwork-image-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+         }
+         
+         .artwork-images-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+         }
+         
+         .artwork-image-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+         }
+         
+         .artwork-image {
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+         }
+         
+         .artwork-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+         }
+         
          @media (max-width: 768px) {
             .product-container {
                flex-direction: column;
@@ -407,6 +457,21 @@
                </div>
             </div>
          </div>
+         
+         <!-- Phần hiển thị ảnh tranh dân gian -->
+         <div class="artwork-image-section">
+            <div class="artwork-images-row">
+               <div class="artwork-image-container">
+                  <img src="images/vanminhtienbo_baiviet.jpg" alt="Tranh dân gian Văn Minh Tiến Bộ" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Văn Minh Tiến Bộ" - Phản ánh thái độ châm biếm của người dân trước sự du nhập văn hóa phương Tây thời Pháp thuộc, với câu "Toa, tăng xương" (Mày coi chừng!)</p>
+               </div>
+               
+               <div class="artwork-image-container">
+                  <img src="images/phongtuccailuong_baiviet.jpg" alt="Tranh dân gian Phong Tục Cải Lương" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Phong Tục Cải Lương" - Thể hiện thái độ thờ ơ trước những cải cách văn hóa theo mô hình phương Tây, với câu "Moa, tặng phú" (Tao mặc kệ!)</p>
+               </div>
+            </div>
+         </div>
       </div>
       <!-- Nội dung chính end -->
       
@@ -418,7 +483,7 @@
             </div>
             <div class="social-icons">
                <a href="https://shopee.vn/shop/320025301" class="social-icon shopee-icon">
-                  <img src="images/shopee_icon.png" alt="Shopee">
+                  <img src="images/shopee-icon.png" alt="Shopee">
                </a>
                <a href="#" class="social-icon facebook-icon">
                   <img src="images/icons/facebook-icon.svg" alt="Facebook">

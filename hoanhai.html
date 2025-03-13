@@ -277,6 +277,56 @@
             color: #000;
          }
          
+         .artwork-image-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+         }
+         
+         .artwork-images-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+         }
+         
+         .artwork-image-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+         }
+         
+         .artwork-image {
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+         }
+         
+         .artwork-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+         }
+         
          @media (max-width: 768px) {
             .product-container {
                flex-direction: column;
@@ -364,7 +414,7 @@
                   <a href="https://shopee.vn/shop/320025301" target="_blank" style="text-decoration: none;">
                      <div class="buy-button">
                         Mua ngay tại
-                        <img src="images/shopee-icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
+                        <img src="images/shopee_icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
                      </div>
                   </a>
                </div>
@@ -426,6 +476,21 @@
                      <p>• <strong style="font-weight: 700;">Nghĩa tả thực</strong>: Chỉ quả dừa có nước trong và cơm trắng.</p>
                      <p>• <strong style="font-weight: 700;">Nghĩa ẩn dụ</strong>: Gợi tả vẻ đẹp của người con gái với làn da trắng trẻo, thanh khiết như ngọc ngà.</p>
                   </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Phần hiển thị ảnh tranh dân gian -->
+         <div class="artwork-image-section">
+            <div class="artwork-images-row">
+               <div class="artwork-image-container">
+                  <img src="images/hungdua_baiviet.jpg" alt="Tranh dân gian Hứng Dừa" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Hứng Dừa" - Minh họa câu thơ lục bát "Khen ai khéo dựng nên dừa, Đấy trèo đây hứng cho vừa một đôi", thể hiện tình yêu đôi lứa qua hình ảnh hái dừa.</p>
+               </div>
+               
+               <div class="artwork-image-container">
+                  <img src="images/hungdua_baiviet2.jpg" alt="Tranh dân gian Trong Như Ngọc, Trắng Như Ngà" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Trong Như Ngọc, Trắng Như Ngà" - Biến thể của tranh Hứng Dừa, với câu thơ ca ngợi vẻ đẹp trong sáng, thuần khiết của quả dừa và ẩn dụ cho vẻ đẹp của người con gái.</p>
                </div>
             </div>
          </div>

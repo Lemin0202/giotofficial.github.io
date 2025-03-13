@@ -277,6 +277,56 @@
             color: #000;
          }
          
+         .artwork-image-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+         }
+         
+         .artwork-images-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+         }
+         
+         .artwork-image-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+         }
+         
+         .artwork-image {
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+         }
+         
+         .artwork-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+         }
+         
          @media (max-width: 768px) {
             .product-container {
                flex-direction: column;
@@ -364,7 +414,7 @@
                   <a href="https://shopee.vn/shop/320025301" target="_blank" style="text-decoration: none;">
                      <div class="buy-button">
                         Mua ngay tại
-                        <img src="images/shopee-icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
+                        <img src="images/shopee_icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
                      </div>
                   </a>
                </div>
@@ -396,6 +446,21 @@
                      <p>Bốn phẩm chất này được gọi là "tứ đoan" (<strong style="font-weight: 700;">四端</strong>) hay "tứ thiện đoan" (<strong style="font-weight: 700;">四善端</strong>), trong đó "đoan" (<strong style="font-weight: 700;">端</strong>) có nghĩa là khởi đầu, gốc rễ. Theo Mạnh Tử, đây là bản tính thiện lương tự nhiên có sẵn trong con người, cần được nuôi dưỡng và phát triển. Ông cũng khẳng định rằng, ai không có đủ bốn phẩm chất này thì không xứng đáng làm người (<strong style="font-weight: 700;">非人</strong>).</p>
                      <p>Phía sau các em bé trong tranh còn có hình ảnh hoa sen, biểu tượng của sự thuần khiết và cao quý.</p>
                   </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Phần hiển thị ảnh tranh dân gian -->
+         <div class="artwork-image-section">
+            <div class="artwork-images-row">
+               <div class="artwork-image-container">
+                  <img src="images/letri_baiviet.jpg" alt="Tranh dân gian Lễ Trí" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Lễ Trí" (礼智) - Thể hiện hai trong bốn phẩm chất đạo đức cơ bản theo Nho giáo, minh họa qua hình ảnh đứa trẻ ôm rùa, biểu tượng cho sự khôn ngoan và lễ nghĩa.</p>
+               </div>
+               
+               <div class="artwork-image-container">
+                  <img src="images/nhannghia_baiviet.jpg" alt="Tranh dân gian Nhân Nghĩa" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Nhân Nghĩa" (仁義) - Thể hiện hai phẩm chất đạo đức cơ bản khác theo Nho giáo, minh họa qua hình ảnh đứa trẻ ôm cóc, biểu tượng cho lòng nhân ái và nghĩa khí.</p>
                </div>
             </div>
          </div>

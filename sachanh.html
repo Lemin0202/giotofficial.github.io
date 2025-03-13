@@ -277,6 +277,56 @@
             color: #000;
          }
          
+         .artwork-image-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+         }
+         
+         .artwork-images-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+         }
+         
+         .artwork-image-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+         }
+         
+         .artwork-image {
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+         }
+         
+         .artwork-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+         }
+         
          @media (max-width: 768px) {
             .product-container {
                flex-direction: column;
@@ -364,7 +414,7 @@
                   <a href="https://shopee.vn/shop/320025301" target="_blank" style="text-decoration: none;">
                      <div class="buy-button">
                         Mua ngay tại
-                        <img src="images/shopee-icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
+                        <img src="images/shopee_icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
                      </div>
                   </a>
                </div>
@@ -406,6 +456,16 @@
                      <p>Tiếng gà gáy không chỉ đơn thuần là một hiện tượng tự nhiên, mà còn gắn liền với niềm tin tín ngưỡng của người xưa. Trong quan niệm truyền thống, gà là loài vật mang tính dương, có khả năng xua đuổi tà ma, đồng thời tượng trưng cho sự thức tỉnh, khởi đầu và may mắn. Cặp tranh "Dạ xướng - Nhật minh" không chỉ là một tác phẩm nghệ thuật mang tính đối xứng, mà còn phản ánh sâu sắc thế giới quan dân gian về sự hài hòa giữa ngày và đêm, giữa trừ tà và cầu may, giữa âm và dương.</p>
                      <p>Bằng lối thể hiện mộc mạc mà tinh tế, tranh Đông Hồ không chỉ miêu tả hình ảnh mà còn gói ghém trong đó cả một triết lý nhân sinh—một thế giới quan đậm chất Á Đông, nơi từng tiếng gà gáy cũng mang theo ý nghĩa bảo vệ và chúc phúc cho con người.</p>
                   </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Phần hiển thị ảnh tranh dân gian -->
+         <div class="artwork-image-section">
+            <div class="artwork-images-row">
+               <div class="artwork-image-container" style="max-width: 600px; margin: 0 auto;">
+                  <img src="images/gadaxuong_ganhatminh_baiviet.jpg" alt="Tranh dân gian Dạ Xướng - Nhật Minh" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Dạ Xướng - Nhật Minh" - Cặp tranh đối xứng về gà trong dân gian, thể hiện niềm tin về tiếng gà gáy đêm xua đuổi tà ma và tiếng gà gáy ngày mang lại điềm lành.</p>
                </div>
             </div>
          </div>

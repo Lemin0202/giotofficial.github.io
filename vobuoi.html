@@ -277,6 +277,57 @@
             color: #000;
          }
          
+         .artwork-image-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+         }
+         
+         .artwork-images-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+         }
+         
+         .artwork-image-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+         }
+         
+         .artwork-image {
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+         }
+         
+         .artwork-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+         }
+         
          @media (max-width: 768px) {
             .product-container {
                flex-direction: column;
@@ -362,7 +413,7 @@
                   <a href="https://shopee.vn/shop/320025301" target="_blank" style="text-decoration: none;">
                      <div class="buy-button">
                         Mua ngay tại
-                        <img src="images/shopee-icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
+                        <img src="images/shopee_icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
                      </div>
                   </a>
                </div>
@@ -391,6 +442,16 @@
                      <p>Bức tranh không chỉ đơn thuần là minh họa cho câu chuyện Tây Du Ký nổi tiếng, mà còn mang ý nghĩa sâu sắc về hành trình tu tập, vượt qua chướng ngại và khổ nạn để đạt đến giác ngộ. Mỗi nhân vật đại diện cho một khía cạnh của con người: Tôn Ngộ Không tượng trưng cho trí tuệ và sự dũng mãnh, Trư Bát Giới đại diện cho dục vọng và ham muốn, Sa Tăng là biểu tượng của sự kiên nhẫn và trung thành, còn Đường Tăng là hiện thân của đức tin và lòng từ bi.</p>
                      <p>Tranh dân gian Đông Hồ về đề tài này không chỉ phản ánh sự ảnh hưởng của văn hóa Trung Hoa đến Việt Nam mà còn thể hiện cách tiếp nhận và Việt hóa những yếu tố văn hóa nước ngoài, tạo nên bản sắc riêng trong nghệ thuật dân gian Việt Nam.</p>
                   </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Phần hiển thị ảnh tranh dân gian -->
+         <div class="artwork-image-section">
+            <div class="artwork-images-row">
+               <div class="artwork-image-container">
+                  <img src="images/tayduky_baiviet.jpg" alt="Tranh dân gian Thầy Trò Đường Tăng" class="artwork-image">
+                  <p class="artwork-caption">Tranh dân gian Đông Hồ "Thầy Trò Đường Tăng Thỉnh Kinh" - Minh họa bốn nhân vật chính trong Tây Du Ký: Đường Tăng, Tôn Ngộ Không, Trư Bát Giới và Sa Tăng, biểu tượng cho hành trình tu tập và vượt qua chướng ngại để đạt đến giác ngộ.</p>
                </div>
             </div>
          </div>

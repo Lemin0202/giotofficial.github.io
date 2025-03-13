@@ -277,6 +277,43 @@
             color: #000;
          }
          
+         .artwork-image-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+         }
+         
+         .artwork-image-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+         }
+         
+         .artwork-image {
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+         }
+         
+         .artwork-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            text-align: center;
+         }
+         
          @media (max-width: 768px) {
             .product-container {
                flex-direction: column;
@@ -362,7 +399,7 @@
                   <a href="https://shopee.vn/shop/320025301" target="_blank" style="text-decoration: none;">
                      <div class="buy-button">
                         Mua ngay tại
-                        <img src="images/shopee-icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
+                        <img src="images/shopee_icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
                      </div>
                   </a>
                </div>
@@ -395,6 +432,14 @@
                      <p>Qua cách miêu tả và sử dụng chữ Nôm, ta thấy được sự sáng tạo trong việc kết hợp các yếu tố truyền thống và hiện đại, cũng như phản ứng của người dân trước những thay đổi công nghệ đột phá của thời đại.</p>
                   </div>
                </div>
+            </div>
+         </div>
+         
+         <!-- Ảnh bức tranh -->
+         <div class="artwork-image-section">
+            <div class="artwork-image-container">
+               <img src="images/maybay_baiviet.jpg" alt="Tranh dân gian Máy Bay" class="artwork-image">
+               <p class="artwork-caption">Tranh dân gian Đông Hồ "Máy Bay" - Phản ánh sự ngỡ ngàng của người Việt trước công nghệ phương Tây đầu thế kỷ 20</p>
             </div>
          </div>
       </div>
