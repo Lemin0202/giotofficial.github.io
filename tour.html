@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Tour Trải Nghiệm | Giọt - Natural Breath</title>
+      <meta name="keywords" content="Tour chưng cất tinh dầu, Trải nghiệm tinh dầu, Giọt, Tinh dầu thiên nhiên, Văn hóa dân gian Việt Nam">
+      <meta name="description" content="Trải nghiệm tour chưng cất tinh dầu độc đáo cùng Giọt - tự tay chiết xuất hương thơm thiên nhiên với 3 gói trải nghiệm: Hương Nhẹ, Hương Đậm và Hương Sâu.">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <style>
+         body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-image: url('images/background-tour.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+         }
+         
+         .new-header {
+            background-color: rgba(240, 248, 240, 0.9);
+            padding: 10px 0;
+            position: relative;
+            z-index: 100;
+         }
+         
+         .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+         }
+         
+         .tour-title {
+            color: #2a4a2a;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            text-align: center;
+         }
+         
+         .tour-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+         }
+         
+         .tour-card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+         }
+         
+         .tour-card-header {
+            text-align: center;
+            margin-bottom: 10px;
+            width: 100%;
+         }
+         
+         .tour-card-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #2a4a2a;
+            margin: 0 0 5px;
+         }
+         
+         .tour-card-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+         }
+         
+         .tour-card {
+            width: 100%;
+            margin-bottom: 15px;
+            border: none;
+            background: transparent;
+         }
+         
+         .tour-card-img {
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+            padding: 0;
+            background: transparent;
+         }
+         
+         .tour-btn {
+            display: inline-block;
+            background-color: #3a5a3a;
+            color: white;
+            text-align: center;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+         }
+         
+         .tour-btn:hover {
+            background-color: #2a4a2a;
+         }
+         
+         .footer {
+            background-color: rgba(240, 248, 240, 0.9);
+            padding: 10px 0;
+            width: 100%;
+         }
+         
+         .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+         }
+         
+         .copyright {
+            color: #333;
+            font-size: 0.9rem;
+         }
+         
+         .social-icons {
+            display: flex;
+            gap: 15px;
+         }
+         
+         .social-icon img {
+            height: 20px;
+            width: auto;
+         }
+         
+         @media (max-width: 768px) {
+            .tour-title {
+               font-size: 2rem;
+            }
+            
+            .tour-cards {
+               flex-direction: column;
+               align-items: center;
+            }
+            
+            .tour-card-container {
+               width: 90%;
+               max-width: 250px;
+            }
+            
+            .tour-card-img {
+               width: 100%;
+               height: 250px;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="new-header">
+         <div class="container">
+            <div class="logo-container">
+               <a href="index.html"><img src="images/logo.png" alt="Giọt Logo"></a>
+            </div>
+            <div class="icons-container">
+               <div class="nav-item">
+                  <a class="nav-link" href="tinhdauthiennhien.html" id="tinhdauLink">
+                     <img src="images/icon-1.png" alt="Tinh dầu" title="Tinh dầu thiên nhiên">
+                     <span class="icon-text">Tinh dầu</span>
+                  </a>
+               </div>
+               
+               <div class="nav-item">
+                  <a class="nav-link" href="tour.html" id="tourLink">
+                     <img src="images/icon-2.png" alt="Tour tham quan" title="Tour chưng cất">
+                     <span class="icon-text">Tour</span>
+                  </a>
+               </div>
+               
+               <a href="https://shopee.vn/shop/320025301" class="nav-link" target="_blank">
+                  <img src="images/icon-3.png" alt="Liên hệ" title="Liên hệ trên Shopee">
+                  <span class="icon-text">Liên hệ</span>
+               </a>
+            </div>
+            <div class="search-container">
+               <input type="text" class="search-input" placeholder="Tìm kiếm...">
+               <i class="fa fa-search search-icon"></i>
+               <i class="fa fa-times search-close"></i>
+            </div>
+         </div>
+      </div>
+      <!-- header section end -->
+      
+      <!-- Main Content -->
+      <div class="main-content">
+         <h1 class="tour-title">Tour Trải Nghiệm</h1>
+         
+         <div class="tour-cards">
+            <!-- Hương Nhẹ -->
+            <div class="tour-card-container">
+               <div class="tour-card-header">
+                  <h3 class="tour-card-title">Hương Nhẹ</h3>
+                  <div class="tour-card-price">150.000đ</div>
+               </div>
+               <div class="tour-card">
+                  <img src="images/tour_huong_nhe-thumbnail.png" alt="Tour Hương Nhẹ" class="tour-card-img">
+               </div>
+               <a href="#" class="tour-btn">Xem Chi Tiết</a>
+            </div>
+            
+            <!-- Hương Đậm -->
+            <div class="tour-card-container">
+               <div class="tour-card-header">
+                  <h3 class="tour-card-title">Hương Đậm</h3>
+                  <div class="tour-card-price">200.000đ</div>
+               </div>
+               <div class="tour-card">
+                  <img src="images/tour_huong_dam-thumbnail.png" alt="Tour Hương Đậm" class="tour-card-img">
+               </div>
+               <a href="#" class="tour-btn">Xem Chi Tiết</a>
+            </div>
+            
+            <!-- Hương Sâu -->
+            <div class="tour-card-container">
+               <div class="tour-card-header">
+                  <h3 class="tour-card-title">Hương Sâu</h3>
+                  <div class="tour-card-price">300.000đ</div>
+               </div>
+               <div class="tour-card">
+                  <img src="images/tour_huong_sau-thumbnail.png" alt="Tour Hương Sâu" class="tour-card-img">
+               </div>
+               <a href="#" class="tour-btn">Xem Chi Tiết</a>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Footer -->
+      <div class="footer">
+         <div class="footer-content">
+            <div class="copyright">
+               © 2025 Giọt Official
+            </div>
+            <div class="social-icons">
+               <a href="https://shopee.vn/shop/320025301" target="_blank" class="social-icon">
+                  <img src="images/shopee-icon.png" alt="Shopee">
+               </a>
+               <a href="#" class="social-icon">
+                  <img src="images/icons/facebook-icon.svg" alt="Facebook">
+               </a>
+               <a href="#" class="social-icon">
+                  <img src="images/icons/instagram-icon.svg" alt="Instagram">
+               </a>
+               <a href="#" class="social-icon">
+                  <img src="images/icons/tiktok-icon.svg" alt="TikTok">
+               </a>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- Tìm kiếm -->
+      <script src="js/search.js"></script>
+   </body>
+</html> 

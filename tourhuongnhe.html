@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Tour Hương Nhẹ | Giọt - Natural Breath</title>
+      <meta name="keywords" content="Tour chưng cất tinh dầu, Trải nghiệm tinh dầu, Giọt, Tinh dầu thiên nhiên, Văn hóa dân gian Việt Nam">
+      <meta name="description" content="Trải nghiệm tour chưng cất tinh dầu Hương Nhẹ cùng Giọt - tự tay chiết xuất hương thơm thiên nhiên trong 4 giờ 30 phút.">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <style>
+         /* RESET CƠ BẢN */
+         body, html, div, span, applet, object, iframe,
+         h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+         a, abbr, acronym, address, big, cite, code,
+         del, dfn, em, img, ins, kbd, q, s, samp,
+         small, strike, strong, sub, sup, tt, var,
+         b, u, i, center,
+         dl, dt, dd, ol, ul, li,
+         fieldset, form, label, legend,
+         table, caption, tbody, tfoot, thead, tr, th, td,
+         article, aside, canvas, details, embed,
+         figure, figcaption, footer, header, hgroup,
+         menu, nav, output, ruby, section, summary,
+         time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+         }
+         /* HTML5 display-role reset for older browsers */
+         article, aside, details, figcaption, figure,
+         footer, header, hgroup, menu, nav, section {
+            display: block;
+         }
+         body {
+            line-height: 1;
+         }
+         ol, ul {
+            list-style: none;
+         }
+         blockquote, q {
+            quotes: none;
+         }
+         blockquote:before, blockquote:after,
+         q:before, q:after {
+            content: '';
+            content: none;
+         }
+         table {
+            border-collapse: collapse;
+            border-spacing: 0;
+         }
+
+         /* BODY & LAYOUT CHUNG */
+         body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-image: url('images/background-tour-huong-nhe.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+         }
+         
+         .new-header {
+            background-color: rgba(240, 248, 240, 0.9);
+            padding: 10px 0;
+            position: relative;
+            z-index: 100;
+         }
+         
+         .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background-color: transparent;
+            box-shadow: none;
+            margin-top: 20px;
+            margin-bottom: 0;
+         }
+         
+         .tour-overview {
+            display: flex;
+            width: 100%;
+            padding: 20px;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+            justify-content: center;
+            margin-top: 30px;
+         }
+         
+         .side-thumbnails {
+            width: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: space-between;
+            height: 350px;
+         }
+         
+         .side-thumbnail {
+            width: 100%;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+         }
+         
+         .side-thumbnail:hover {
+            transform: scale(1.05);
+         }
+         
+         .side-thumbnail.active {
+            border: 2px solid #2a4a2a;
+         }
+         
+         .main-panels {
+            display: flex;
+            flex: 1;
+            gap: 15px;
+            max-width: 900px;
+            justify-content: center;
+         }
+         
+         .process-panel {
+            flex: 1;
+            background-color: transparent;
+            border-radius: 10px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 430px;
+            height: 350px;
+            box-shadow: none !important;
+            background: none !important;
+            border: none !important;
+         }
+         
+         .process-image {
+            width: 100%;
+            height: 100%;
+            max-height: 350px;
+            object-fit: contain;
+         }
+         
+         .info-panel {
+            flex: 1;
+            background-color: #f5f9f5;
+            border-radius: 10px;
+            padding: 15px;
+            position: relative;
+            max-width: 430px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+         }
+         
+         .tour-title {
+            color: #2a4a2a;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: left;
+            text-transform: uppercase;
+         }
+         
+         .tour-details {
+            margin-bottom: 20px;
+         }
+         
+         .detail-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+         }
+         
+         .detail-icon {
+            width: 24px;
+            margin-right: 10px;
+            color: #2a4a2a;
+         }
+         
+         .detail-text {
+            flex: 1;
+            font-size: 0.95rem;
+         }
+         
+         .detail-label {
+            font-weight: 600;
+            color: #2a4a2a;
+            margin-right: 5px;
+         }
+         
+         .price-tag {
+            position: absolute;
+            top: -35px;
+            right: -35px;
+            width: 130px;
+            height: auto;
+            z-index: 10;
+         }
+         
+         .tour-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+         }
+         
+         .action-btn {
+            flex: 1;
+            display: inline-block;
+            background-color: #d1e8d1;
+            color: #2a4a2a;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 2px solid #3a5a3a;
+            max-width: 200px;
+            min-width: 150px;
+            margin: 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
+         }
+         
+         .action-btn:hover {
+            background-color: #c1d8c1;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+         }
+         
+         .footer {
+            background-color: rgba(240, 248, 240, 0.9);
+            padding: 10px 0;
+            width: 100%;
+            margin-top: auto;
+         }
+         
+         .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+         }
+         
+         .copyright {
+            color: #333;
+            font-size: 0.9rem;
+         }
+         
+         .social-icons {
+            display: flex;
+            gap: 15px;
+         }
+         
+         .social-icon img {
+            height: 20px;
+            width: auto;
+         }
+         
+         .fa-map-marker {
+            color: #ff3366;
+         }
+         
+         .fa-users {
+            color: #6633cc;
+         }
+         
+         .fa-clock-o {
+            color: #ff6600;
+         }
+         
+         .fa-leaf {
+            color: #66cc33;
+         }
+
+         /* MEDIA QUERIES */
+         @media (max-width: 992px) {
+            .tour-overview {
+               flex-direction: column;
+               align-items: center;
+            }
+            
+            .side-thumbnails {
+               width: 100%;
+               flex-direction: row;
+               justify-content: center;
+               max-width: 400px;
+            }
+            
+            .side-thumbnail {
+               width: 70px;
+               height: 70px;
+            }
+            
+            .main-panels {
+               flex-direction: column;
+               align-items: center;
+               max-width: 100%;
+            }
+            
+            .process-panel, .info-panel {
+               max-width: 100%;
+               width: 100%;
+            }
+            
+            .price-tag {
+               top: -20px;
+               right: -20px;
+               width: 120px;
+            }
+         }
+         
+         @media (max-width: 768px) {
+            .main-content {
+               padding: 10px;
+            }
+            
+            .tour-title {
+               font-size: 1.3rem;
+            }
+            
+            .tour-actions {
+               flex-direction: column;
+               align-items: center;
+            }
+            
+            .action-btn {
+               width: 100%;
+               max-width: 250px;
+               margin-bottom: 10px;
+            }
+         }
+         
+         /* Tour Schedule Styles */
+         .tour-schedule-section {
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+         }
+         
+         .schedule-container {
+            background-color: #f5f9f5;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+         }
+         
+         .schedule-header {
+            margin-bottom: 25px;
+            border-bottom: 2px solid #d1e8d1;
+            padding-bottom: 15px;
+         }
+         
+         .schedule-header h2 {
+            color: #2a4a2a;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+         }
+         
+         .schedule-header h2:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #2a4a2a;
+            margin: 10px auto 0;
+         }
+         
+         .schedule-intro {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 20px;
+         }
+
+         /* Các dòng Thời lượng, Mô tả... */
+         .schedule-intro-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;      /* Cho phép text dài xuống dòng */
+            margin-bottom: 10px;
+         }
+         
+         .schedule-intro-label-container {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            min-width: 120px;     /* Độ rộng tối thiểu cho icon + nhãn */
+            margin-right: 0;      /* Loại bỏ khoảng cách bên phải */
+         }
+         
+         .schedule-intro-icon {
+            width: 24px;
+            margin-right: 10px;
+            font-size: 1.1rem;
+            text-align: center;
+            flex-shrink: 0;
+         }
+         
+         .schedule-intro-label {
+            font-weight: 600;
+            color: #2a4a2a;
+            white-space: nowrap;  /* Tránh nhãn bị xuống dòng */
+         }
+         
+         .schedule-intro-text {
+            flex: 1;
+            text-align: justify;  /* Văn bản dài căn đều */
+            padding-left: 0;      /* Loại bỏ padding bên trái */
+         }
+         
+         .schedule-content h3 {
+            color: #2a4a2a;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+         }
+         
+         .schedule-content h3:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #d1e8d1;
+            margin: 10px auto 0;
+         }
+         
+         .schedule-item {
+            display: flex;
+            margin-bottom: 25px;
+            position: relative;
+            flex-direction: column;
+         }
+         
+         .schedule-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+         }
+         
+         .schedule-number {
+            background-color: #2a4a2a;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-right: 15px;
+            font-family: 'Montserrat', sans-serif;
+         }
+         
+         .schedule-title h4 {
+            color: #2a4a2a;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+         }
+         
+         .schedule-details {
+            flex: 1;
+            border: 1px solid #d1e8d1;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            margin-left: 45px;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+         }
+         
+         .schedule-details:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+         }
+         
+         .schedule-details ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+         }
+         
+         .schedule-details li {
+            margin-bottom: 10px;
+            position: relative;
+            line-height: 1.5;
+            padding-left: 25px;
+            display: flex;
+            align-items: flex-start;
+         }
+         
+         .schedule-details li:before {
+            content: '•';
+            color: #2a4a2a;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 5px;
+            top: -2px;
+         }
+         
+         .schedule-details li:last-child {
+            margin-bottom: 0;
+         }
+         
+         /* Responsive styles for schedule */
+         @media (max-width: 768px) {
+            .tour-schedule-section {
+               padding: 0 15px;
+            }
+            
+            .schedule-container {
+               padding: 20px;
+            }
+            
+            .schedule-header h2 {
+               font-size: 1.5rem;
+            }
+            
+            .schedule-content h3 {
+               font-size: 1.3rem;
+            }
+            
+            .schedule-details h4 {
+               font-size: 1.1rem;
+            }
+            
+            .schedule-number {
+               width: 35px;
+               height: 35px;
+               font-size: 1.1rem;
+            }
+            
+            .schedule-intro-item {
+               flex-direction: row;
+               margin-bottom: 15px;
+               align-items: center;
+            }
+            
+            .schedule-intro-label-container {
+               margin-bottom: 0;
+            }
+            
+            .schedule-intro-text {
+               padding-left: 5px;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="new-header">
+         <div class="container">
+            <div class="logo-container">
+               <a href="index.html"><img src="images/logo.png" alt="Giọt Logo"></a>
+            </div>
+            <div class="icons-container">
+               <div class="nav-item">
+                  <a class="nav-link" href="tinhdauthiennhien.html" id="tinhdauLink">
+                     <img src="images/icon-1.png" alt="Tinh dầu" title="Tinh dầu thiên nhiên">
+                     <span class="icon-text">Tinh dầu</span>
+                  </a>
+               </div>
+               
+               <div class="nav-item">
+                  <a class="nav-link" href="tour.html" id="tourLink">
+                     <img src="images/icon-2.png" alt="Tour tham quan" title="Tour chưng cất">
+                     <span class="icon-text">Tour</span>
+                  </a>
+               </div>
+               
+               <a href="https://shopee.vn/shop/320025301" class="nav-link" target="_blank">
+                  <img src="images/icon-3.png" alt="Liên hệ" title="Liên hệ trên Shopee">
+                  <span class="icon-text">Liên hệ</span>
+               </a>
+            </div>
+            <div class="search-container">
+               <input type="text" class="search-input" placeholder="Tìm kiếm...">
+               <i class="fa fa-search search-icon"></i>
+               <i class="fa fa-times search-close"></i>
+            </div>
+         </div>
+      </div>
+      <!-- header section end -->
+      
+      <!-- Main Content -->
+      <div class="main-content">
+         <!-- Tour Overview Section -->
+         <div class="tour-overview">
+            <!-- Side Thumbnails -->
+            <div class="side-thumbnails">
+               <img src="images/tour-gallery-1.png" alt="Tour Hương Nhẹ 1" class="side-thumbnail active" onclick="changeImage('images/tour-gallery-1.png', this)">
+               <img src="images/tour-gallery-2.png" alt="Tour Hương Nhẹ 2" class="side-thumbnail" onclick="changeImage('images/tour-gallery-2.png', this)">
+               <img src="images/tour-gallery-3.png" alt="Tour Hương Nhẹ 3" class="side-thumbnail" onclick="changeImage('images/tour-gallery-3.png', this)">
+               <img src="images/tour-gallery-4.png" alt="Tour Hương Nhẹ 4" class="side-thumbnail" onclick="changeImage('images/tour-gallery-4.png', this)">
+            </div>
+            
+            <!-- Main Panels -->
+            <div class="main-panels">
+               <!-- Process Panel -->
+               <div class="process-panel">
+                  <img src="images/distillation-process.png" alt="Quy trình chưng cất" class="process-image">
+               </div>
+               
+               <!-- Info Panel -->
+               <div class="info-panel">
+                  <h1 class="tour-title">TOUR HƯƠNG NHẸ</h1>
+                  <img src="images/pricetag-150k.png" alt="150.000đ" class="price-tag">
+                  
+                  <div class="tour-details">
+                     <div class="detail-item">
+                        <i class="fa fa-map-marker detail-icon"></i>
+                        <div class="detail-text">
+                           <span class="detail-label">Địa điểm:</span> Palmy Farm
+                        </div>
+                     </div>
+                     
+                     <div class="detail-item">
+                        <i class="fa fa-users detail-icon"></i>
+                        <div class="detail-text">
+                           <span class="detail-label">Số khách:</span> 2 - 6 người/tour
+                        </div>
+                     </div>
+                     
+                     <div class="detail-item">
+                        <i class="fa fa-clock-o detail-icon"></i>
+                        <div class="detail-text">
+                           <span class="detail-label">Thời lượng:</span> 4 giờ 30 phút
+                        </div>
+                     </div>
+                     
+                     <div class="detail-item">
+                        <i class="fa fa-leaf detail-icon"></i>
+                        <div class="detail-text">
+                           <span class="detail-label">Trải nghiệm:</span> Cơ bản, chưng nhanh, chọn 1 trong 4 nguyên liệu có sẵn, thu nước cất và tinh dầu ít. Trải nghiệm các hoạt động khác trong trang trại.
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="tour-actions">
+                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqTVEI_5hjvku59HKsw2RkSSNCUc6pjNx5UrcS0zt4jSr3eQ/viewform" class="action-btn">Đặt Ngay</a>
+                     <a href="#tour-schedule" class="action-btn">Xem lịch trình Tour</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Tour Schedule Section -->
+      <div class="tour-schedule-section" id="tour-schedule">
+         <div class="schedule-container">
+            <div class="schedule-header">
+               <h2>TOUR HƯƠNG NHẸ - 150K</h2>
+               <div class="schedule-intro">
+                  <table style="width: 100%; border-collapse: collapse;">
+                     <tr>
+                        <td style="white-space: nowrap; vertical-align: top; padding-right: 10px;">
+                           <i class="fa fa-clock-o" style="color: inherit; margin-right: 5px;"></i>
+                           <strong>Thời lượng:</strong>
+                        </td>
+                        <td>4 giờ ~ 4 giờ 30 phút</td>
+                     </tr>
+                     <tr>
+                        <td style="white-space: nowrap; vertical-align: top; padding-right: 10px; padding-top: 10px;">
+                           <i class="fa fa-search" style="color: inherit; margin-right: 5px;"></i>
+                           <strong>Mô tả:</strong>
+                        </td>
+                        <td style="padding-top: 10px;">Trải nghiệm chưng cất tinh dầu cơ bản, dành cho những ai muốn thử sức với quy trình chưng cất hương liệu tự nhiên mà không mất nhiều thời gian.</td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            
+            <div class="schedule-content">
+               <h3>Lịch trình chi tiết</h3>
+               
+               <div class="schedule-item">
+                  <div class="schedule-title">
+                     <div class="schedule-number">1</div>
+                     <h4>Đón khách & hóa thân thành nhà nghiên cứu</h4>
+                  </div>
+                  <div class="schedule-details">
+                     <ul>
+                        <li>Khách đến Palmy Farm, gửi đồ đạc tại điểm nghỉ.</li>
+                        <li>Mỗi người nhận một áo blazer "Nhà nghiên cứu mùi hương" để nhập vai.</li>
+                        <li>Hướng dẫn viên giới thiệu hành trình trải nghiệm.</li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <div class="schedule-item">
+                  <div class="schedule-title">
+                     <div class="schedule-number">2</div>
+                     <h4>Giới thiệu khu vườn & chọn nguyên liệu</h4>
+                  </div>
+                  <div class="schedule-details">
+                     <ul>
+                        <li>Dẫn khách đến khu vườn nguyên liệu, nơi có bảng giới thiệu quy trình chưng cất.</li>
+                        <li>Khách tìm hiểu về các loại nguyên liệu và tự chọn 1 trong 4 nguyên liệu có sẵn trong ngày.</li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <div class="schedule-item">
+                  <div class="schedule-title">
+                     <div class="schedule-number">3</div>
+                     <h4>Sơ chế nguyên liệu</h4>
+                  </div>
+                  <div class="schedule-details">
+                     <ul>
+                        <li>Khách tự tay sơ chế nguyên liệu: rửa sạch, gọt vỏ, cắt lát...</li>
+                        <li>Có sẵn nguyên liệu sơ chế sẵn cho khách nào không muốn thao tác nhiều.</li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <div class="schedule-item">
+                  <div class="schedule-title">
+                     <div class="schedule-number">4</div>
+                     <h4>Lắp đặt bộ chưng cất & tìm hiểu nguyên lý</h4>
+                  </div>
+                  <div class="schedule-details">
+                     <ul>
+                        <li>Khách tự tay lắp bộ chưng cất (chọn giữa thủy tinh hoặc nồi kim loại).</li>
+                        <li>Hướng dẫn viên giải thích nguyên lý đơn giản: nhiệt độ sôi, cách điều chỉnh lửa, đặc tính nguyên liệu…</li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <div class="schedule-item">
+                  <div class="schedule-title">
+                     <div class="schedule-number">5</div>
+                     <h4>Giải trí trong lúc chờ chưng cất</h4>
+                  </div>
+                  <div class="schedule-details">
+                     <ul>
+                        <li>Tham quan vườn, chèo thuyền, chụp ảnh hoặc thưởng thức các loại trà thảo mộc.</li>
+                        <li>Tham gia mini game nhẹ nhàng cùng hướng dẫn viên.</li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <div class="schedule-item">
+                  <div class="schedule-title">
+                     <div class="schedule-number">6</div>
+                     <h4>Nhận sản phẩm & chụp ảnh lưu niệm</h4>
+                  </div>
+                  <div class="schedule-details">
+                     <ul>
+                        <li>Khách thu hoạch tinh dầu, đóng gói sản phẩm với nhãn dán Palmy Farm.</li>
+                        <li>Chụp ảnh cùng sản phẩm.</li>
+                     </ul>
+                  </div>
+               </div>
+               
+               <div class="schedule-item">
+                  <div class="schedule-title">
+                     <div class="schedule-number">7</div>
+                     <h4>Kết thúc trải nghiệm</h4>
+                  </div>
+                  <div class="schedule-details">
+                     <ul>
+                        <li>Hướng dẫn viên tiễn khách ra cổng, tặng quà lưu niệm nhỏ.</li>
+                        <li>Lời cảm ơn & hẹn gặp lại.</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Footer -->
+      <div class="footer">
+         <div class="footer-content">
+            <div class="copyright">
+               © 2025 Giọt Official
+            </div>
+            <div class="social-icons">
+               <a href="https://shopee.vn/shop/320025301" target="_blank" class="social-icon">
+                  <img src="images/shopee-icon.png" alt="Shopee">
+               </a>
+               <a href="#" class="social-icon">
+                  <img src="images/icons/facebook-icon.svg" alt="Facebook">
+               </a>
+               <a href="#" class="social-icon">
+                  <img src="images/icons/instagram-icon.svg" alt="Instagram">
+               </a>
+               <a href="#" class="social-icon">
+                  <img src="images/icons/tiktok-icon.svg" alt="TikTok">
+               </a>
+            </div>
+         </div>
+      </div>
+      
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- Tìm kiếm -->
+      <script src="js/search.js"></script>
+      
+      <!-- Gallery Script -->
+      <script>
+         function changeImage(src, thumbnail) {
+            // Thay đổi ảnh lớn khi click vào thumbnail
+            document.querySelector('.process-image').src = src;
+            
+            // Remove active class from all thumbnails
+            const thumbnails = document.querySelectorAll('.side-thumbnail');
+            thumbnails.forEach(thumb => {
+               thumb.classList.remove('active');
+            });
+            
+            // Add active class to clicked thumbnail
+            thumbnail.classList.add('active');
+         }
+         
+         // Smooth scroll for anchor links
+         document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+               anchor.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  
+                  const targetId = this.getAttribute('href');
+                  if(targetId === '#') return;
+                  
+                  const targetElement = document.querySelector(targetId);
+                  if(targetElement) {
+                     window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset cho header
+                        behavior: 'smooth'
+                     });
+                  }
+               });
+            });
+         });
+      </script>
+   </body>
+</html>
