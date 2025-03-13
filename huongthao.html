@@ -9,9 +9,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Hoa Trà | Giọt - Natural Breath</title>
-      <meta name="keywords" content="Tinh dầu Hoa Trà, Tinh dầu thiên nhiên, Tinh dầu nghệ thuật, Văn hóa dân gian Việt Nam, Tranh Đông Hồ">
-      <meta name="description" content="Khám phá tinh dầu Hoa Trà từ Giọt – hương thơm tinh tế, thanh khiết mang đến cảm giác thư thái và bình yên.">
+      <title>Hương Thảo | Giọt - Natural Breath</title>
+      <meta name="keywords" content="Tinh dầu Hương Thảo, Tinh dầu thiên nhiên, Tinh dầu nghệ thuật, Văn hóa dân gian Việt Nam, Tranh Đông Hồ">
+      <meta name="description" content="Khám phá tinh dầu Hương Thảo từ Giọt – hương thơm thảo mộc tươi mát, tiếp thêm năng lượng và sự tỉnh táo.">
       <meta name="author" content="">
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -184,6 +184,7 @@
             display: flex;
             justify-content: center;
             width: 100%;
+            display: none;
          }
          
          .dot {
@@ -204,10 +205,6 @@
          }
          
          .product-image-slide {
-            display: none;
-         }
-         
-         .product-image-slide.active {
             display: block;
          }
          
@@ -330,23 +327,18 @@
          <!-- Phần sản phẩm -->
          <div class="product-container">
             <div class="product-image">
-               <img src="images/hoa_tra1.png" alt="Tinh dầu Hoa Trà" class="product-image-slide active" id="image1">
-               <img src="images/hoa_tra2.png" alt="Tinh dầu Hoa Trà" class="product-image-slide" id="image2">
-               <div class="image-dots">
-                  <span class="dot active" onclick="showImage(1)"></span>
-                  <span class="dot inactive" onclick="showImage(2)"></span>
-               </div>
+               <img src="images/huong_thao.png" alt="Tinh dầu Hương Thảo" class="product-image-slide" id="image1">
             </div>
             <div class="product-details">
-               <h1 class="product-title">Tinh dầu Hoa Trà 🌿 – Hương thơm thanh khiết, thư giãn tuyệt đối ✨</h1>
+               <h1 class="product-title">Tinh dầu Hương Thảo 🌿 – Hương thơm thảo mộc tươi mát, tiếp thêm năng lượng và sự tỉnh táo ✨</h1>
                <ul class="product-info-list">
-                  <li><span class="label-bold">Mùi hương:</span> Nhẹ nhàng, thanh khiết, mang lại cảm giác dễ chịu</li>
+                  <li><span class="label-bold">Mùi hương:</span> Tươi mát, thảo mộc, hơi cay nhẹ, giúp tinh thần sảng khoái</li>
                   <li><span class="label-bold">Shelf life:</span> 2-3 năm</li>
-                  <li><span class="label-bold">KidSafe®:</span> Có</li>
-                  <li><span class="label-bold">An toàn cho phụ nữ có thai:</span> Có</li>
-                  <li><span class="label-bold">An toàn cho phụ nữ nuôi con sữa mẹ:</span> Có</li>
-                  <li><span class="label-bold">An toàn cho thú cưng:</span> Có</li>
-                  <li><span class="label-bold">Kết hợp hoàn hảo với:</span> Oải hương, cam ngọt, sả chanh, bạc hà, gỗ hồng</li>
+                  <li><span class="label-bold">KidSafe®:</span> Có, nhưng nên pha loãng khi dùng cho trẻ nhỏ</li>
+                  <li><span class="label-bold">An toàn cho phụ nữ có thai:</span> Không khuyến khích dùng trong 3 tháng đầu thai kỳ</li>
+                  <li><span class="label-bold">An toàn cho phụ nữ nuôi con sữa mẹ:</span> Có, nhưng không nên dùng với lượng lớn</li>
+                  <li><span class="label-bold">An toàn cho thú cưng:</span> Không khuyến khích dùng trực tiếp cho chó, mèo</li>
+                  <li><span class="label-bold">Kết hợp hoàn hảo với:</span> Bạc hà, cam ngọt, sả chanh, hoắc hương, gỗ tuyết tùng</li>
                </ul>
                
                <div class="usage-section">
@@ -364,7 +356,7 @@
                   <a href="https://shopee.vn/shop/320025301" target="_blank" style="text-decoration: none;">
                      <div class="buy-button">
                         Mua ngay tại
-                        <img src="images/shopee-icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
+                        <img src="images/shopee_icon.png" alt="Shopee" style="height: 16px; vertical-align: middle; position: relative; top: -1px;">
                      </div>
                   </a>
                </div>
@@ -377,14 +369,17 @@
             <div class="explanation-content">
                <div class="explanation-text">
                   <div class="explanation-part">
-                     <h3 class="explanation-subtitle">1 - VINH HOA</h3>
-                     <p>Tranh vẽ cậu bé ôm gà. "<strong style="font-weight: 700;">Vinh hoa</strong>" đúng ra viết là <strong style="font-weight: 700;">荣華 / 榮華</strong>, nhưng trong tranh "Vinh hoa" và "Táo quân" (Táo thần vị), chữ này được viết thành <strong style="font-weight: 700;">荣花</strong>. Điều này có thể liên quan đến việc <strong style="font-weight: 700;">kiêng húy</strong> vợ hoàng đế <strong style="font-weight: 700;">Minh Mạng</strong> (明命), bà <strong style="font-weight: 700;">Hồ Thị Hoa</strong> (胡氏華).</p>
-                     <p>Ngoài ra, các tranh Đông Hồ thời kỳ này cũng tránh húy <strong style="font-weight: 700;">Nguyễn Phúc Thì</strong> (阮福時), tức Nguyễn Phước Thời, tên của hoàng đế <strong style="font-weight: 700;">Tự Đức</strong> (嗣德). Vì thế, chữ "<strong style="font-weight: 700;">thì</strong>" / "<strong style="font-weight: 700;">thời</strong>" (時) trong các bức tranh có thể được thay bằng chữ "<strong style="font-weight: 700;">thìn</strong>" / "<strong style="font-weight: 700;">thần</strong>" (辰), vốn đồng nghĩa với "thời gian" trong ngữ cảnh cổ.</p>
-                     <p>Trong Hán ngữ, chữ "<strong style="font-weight: 700;">kê</strong>" (雞) nghĩa là gà, phát âm gần giống chữ "<strong style="font-weight: 700;">cát</strong>" (吉) mang ý nghĩa tốt lành. Do đó, hình ảnh con gà lớn trong tranh tượng trưng cho "<strong style="font-weight: 700;">đại cát</strong>" (<strong style="font-weight: 700;">大吉</strong>), nghĩa là đại phúc, đại lợi.</p>
+                     <h3 class="explanation-subtitle">ĐINH TÀI TƯƠNG VƯỢNG</h3>
+                     <p>Bức tranh mô tả một đứa trẻ cầm sách với bốn chữ "<strong style="font-weight: 700;">Đinh Tài Tương Vượng</strong>" (<strong style="font-weight: 700;">丁財相旺</strong>), mang ý nghĩa chúc gia đình vừa đông con trai vừa sung túc về tiền tài.</p>
+                     <p>• <strong style="font-weight: 700;">Đinh (丁)</strong>: con trai</p>
+                     <p>• <strong style="font-weight: 700;">Tài (財)</strong>: của cải, tiền bạc</p>
+                     <p>• <strong style="font-weight: 700;">Tương (相)</strong>: cùng nhau, lẫn nhau</p>
+                     <p>• <strong style="font-weight: 700;">Vượng (旺)</strong>: thịnh vượng, hưng thịnh</p>
+                     <p>Đây là lời chúc nhà có nhiều quý tử và tiền của, do đó tranh vẽ 2 đứa bé trai và cái hũ ghi chữ "kim" <strong style="font-weight: 700;">金</strong> nghĩa là vàng, tiền.</p>
                   </div>
                   <div class="explanation-part">
-                     <h3 class="explanation-subtitle">2 - PHÚ QUÝ</h3>
-                     <p>Tranh vẽ cô bé ôm vịt. "<strong style="font-weight: 700;">Phú quý</strong>" (<strong style="font-weight: 700;">富貴</strong>) có nghĩa là giàu sang, sung túc. Trong tranh, phía sau hai em bé còn có hình ảnh <strong style="font-weight: 700;">hoa sen</strong> – một biểu tượng phổ biến trong văn hóa phương Đông, gắn liền với sự <strong style="font-weight: 700;">thanh cao</strong>, <strong style="font-weight: 700;">thuần khiết</strong> và <strong style="font-weight: 700;">phồn vinh</strong>.</p>
+                     <p>Thành ngữ gốc của câu này là "<strong style="font-weight: 700;">Đinh Tài Lưỡng Vượng</strong>" (<strong style="font-weight: 700;">丁財兩旺</strong>), trong đó "lưỡng" (<strong style="font-weight: 700;">兩</strong>) nghĩa là hai, đôi, cặp, nhấn mạnh sự sung túc cả về con cái lẫn tài lộc. Có tranh Đông Hồ "Đinh tài lưỡng vượng" vẽ 2 bé gái ôm gà tạo thành một cặp với tranh "Phúc lộc song toàn" vẽ 2 bé trai ôm cá.</p>
+                     <p>Bức tranh phản ánh quan niệm truyền thống của người Việt về một gia đình hạnh phúc, nơi con đàn cháu đống và tài lộc dồi dào.</p>
                   </div>
                </div>
             </div>
@@ -400,7 +395,7 @@
             </div>
             <div class="social-icons">
                <a href="https://shopee.vn/shop/320025301" class="social-icon shopee-icon">
-                  <img src="images/shopee-icon.png" alt="Shopee">
+                  <img src="images/shopee_icon.png" alt="Shopee">
                </a>
                <a href="#" class="social-icon facebook-icon">
                   <img src="images/icons/facebook-icon.svg" alt="Facebook">
@@ -427,28 +422,5 @@
       <script src="js/custom.js"></script>
       <!-- Tìm kiếm -->
       <script src="js/search.js"></script>
-      
-      <script>
-         function showImage(imageNumber) {
-            // Ẩn tất cả các ảnh
-            document.getElementById('image1').classList.remove('active');
-            document.getElementById('image2').classList.remove('active');
-            
-            // Hiển thị ảnh được chọn
-            document.getElementById('image' + imageNumber).classList.add('active');
-            
-            // Cập nhật trạng thái của các chấm
-            const dots = document.querySelectorAll('.dot');
-            dots.forEach((dot, index) => {
-               if (index + 1 === imageNumber) {
-                  dot.classList.add('active');
-                  dot.classList.remove('inactive');
-               } else {
-                  dot.classList.remove('active');
-                  dot.classList.add('inactive');
-               }
-            });
-         }
-      </script>
    </body>
 </html> 
