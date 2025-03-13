@@ -1326,3 +1326,89 @@ textarea#comment.update_mail::placeholder {
     font-size: 14px;
   }
 }
+
+/* Search Results Styles */
+.search-container {
+    position: relative;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background-color: #f5f9f5;
+}
+
+.search-result-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.search-result-info {
+    flex: 1;
+}
+
+.search-result-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    color: #2a4a2a;
+}
+
+.search-result-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.no-results {
+    padding: 15px;
+    text-align: center;
+    color: #666;
+}
+
+/* Scrollbar styles for search results */
+.search-results::-webkit-scrollbar {
+    width: 6px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
